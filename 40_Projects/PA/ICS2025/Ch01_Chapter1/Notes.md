@@ -49,15 +49,19 @@ IFDEF(DEBUG, printf("Test IFDEF"));
 
 ## 参数从哪里来
 
-在`monitor.c`中的函数`parse_args(argc, argv)`，是从哪里输入的参数呢？看下编译过程
+在执行 NEMU 的时候：
+
+```bash
+make run
+```
+
+输出：
 
 ```bash
 crx@ubuntu:nemu$ make run
 /home/crx/study/2025/ics2024/nemu/build/riscv32-nemu-interpreter --log=/home/crx/study/2025/ics2024/nemu/build/nemu-log.txt  
 [src/utils/log.c:30 init_log] Log is written to /home/crx/study/2025/ics2024/nemu/build/nemu-log.txt
 ```
-
-这就是nemu运行的真正过程，入参为`--log=...`。
 
 所以`make run`最终是调用了`riscv32-nemu-interpreter`，并且传入了参数：
 
@@ -68,7 +72,11 @@ crx@ubuntu:nemu$ make run
 --log=/home/crx/study/2025/ics2024/nemu/build/nemu-log.txt  
 ```
 
-我们看下，项目是如何给`riscv32-nemu-interpreter`传入参数。在`Makefile`中，我们看到调用了`native.mk`，进入此文件可以看到（通过搜索关键字`nemu-log.txt`）：
+输入程序`riscv32-nemu-interpreter `的参数`--log=...`，最终会由`monitor.c`中的函数`parse_args(argc, argv)`来解析。
+
+那么这是从哪里输入的参数呢？
+
+我们就看下，`make run`的命令构成是什么。其定义在`native.mk`，进入此文件可以看到（通过搜索关键字`nemu-log.txt`）：
 
 ```makefile
 # Some convenient rules
@@ -222,7 +230,16 @@ uint8_t* guest_to_host(paddr_t paddr) { return pmem + paddr - CONFIG_MBASE; }
   - 最后将这个偏移加到 `pmem` 上，得到的是：宿主机进程中实际要访问的虚拟地址。
   - 表示 “客户机地址 `0x80001000` 映射到宿主机中 `pmem + 0x1000`”
 
-现在已经知道的是`RESET_VECTOR `值为`0x80000000`：
+宏定义`RESET_VECTOR `值为`0x80000000`（在`nemu/include/memory/paddr.h`中定义）：
+
+```C
+#define RESET_VECTOR (PMEM_LEFT + CONFIG_PC_RESET_OFFSET)
+
+#define PMEM_LEFT  ((paddr_t)CONFIG_MBASE)  // 辅助宏
+#define CONFIG_PC_RESET_OFFSET 0x0			// 辅助宏
+```
+
+所以：
 
 ```C
 guest_to_host(0x80000000) == pmem + (0x80000000 - 0x80000000) == pmem
@@ -233,7 +250,7 @@ guest_to_host(0x80000000) == pmem + (0x80000000 - 0x80000000) == pmem
 - 客户程序实际在宿主机的 `pmem[0]` 开始存放。
 - `guest_to_host()` 提供了一个从 **客户机视角地址空间** 到 **宿主机地址空间的访问手段**。
 
-### `guest_to_host(paddr)`
+### 总结`guest_to_host(paddr)`
 
 - **功能**：将 guest 物理地址（以 `CONFIG_MBASE` 为起点）映射到 host 中 `pmem` 的偏移地址。
 - **意义**：在模拟器或软硬件协作系统中，让 host 系统能够读写客户机的内存。
@@ -241,7 +258,9 @@ guest_to_host(0x80000000) == pmem + (0x80000000 - 0x80000000) == pmem
 
 ### 检验指令加载流程
 
-我们不妨做个测试：
+客户程序从 `0x80000000` 开始，就被加载到 `pmem[0]` 开始的位置（主机位置）。
+
+我们不妨使用 gdb 做个测试：
 
 > ✅验证客户程序被正确地加载到了 guest 的 `0x80000000` 地址（即 host 的 `pmem[0]`），与 `guest_to_host(paddr)` 的理论一致。
 
@@ -254,17 +273,25 @@ Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
 
 Breakpoint 1, init_monitor (argc=<optimized out>, argv=<optimized out>) at src/monitor/monitor.c:118
 118       init_isa();
+
 (gdb) p guest_to_host(RESET_VECTOR)
 // pmem 是模拟的物理内存，位于 host 的虚拟地址空间 0x55555555f000。
 $1 = (uint8_t *) 0x55555555f000 <pmem> '\340' <repeats 199 times>, <incomplete sequence \340>...
+
 (gdb) x pmem
 0x55555555f000 <pmem>:  0xe0e0e0e0
+
+(gdb) p (pmem == guest_to_host(RESET_VECTOR))
+$2 = 1
+
 (gdb) n	// 此时已经执行完毕 memcpy(...);
 42        restart();
+
 (gdb) set $addr = guest_to_host (RESET_VECTOR)
 (gdb) x/5xw $addr
 0x55555555f000 <pmem>:  0x00000297      0x00028823      0x0102c503      0x00100073
 0x55555555f010 <pmem+16>:       0xdeadbeef
+
 (gdb) x/5xw pmem
 0x55555555f000 <pmem>:  0x00000297      0x00028823      0x0102c503      0x00100073
 0x55555555f010 <pmem+16>:       0xdeadbeef
