@@ -1,6 +1,6 @@
 # ICS2025 PA 学习笔记
 
-来源: https://nju-projectn.github.io/ics-pa-gitbook/ics2025/index.html
+来源: [南京大学 计算机科学与技术系 计算机系统基础 课程实验 2025](https://nju-projectn.github.io/ics-pa-gitbook/ics2025/index.html)
 
 ## 使用说明
 
@@ -16,3 +16,4 @@
 - [Ch03_Chapter3](Ch03_Chapter3/Notes.md)
 - [Ch04_Chapter4](Ch04_Chapter4/Notes.md)
 - [Ch05_Chapter5](Ch05_Chapter5/Notes.md)
+

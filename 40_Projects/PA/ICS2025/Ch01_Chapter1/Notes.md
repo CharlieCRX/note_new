@@ -38,93 +38,14 @@ NEMU中通过C代码实现了这个基本的计算机，称之为“客户计算
 
 ## kconfig生成的宏与条件编译
 
-宏展开`nemu/include/macro.h`中的`IFDEF`。我们以下例分析：
+如何理解
 
 ```C
 #define DEBUG 1
-IFDEF(DEBUG， printf("DEBUG\n");)
+IFDEF(DEBUG, printf("Test IFDEF"));
 ```
 
-在理解宏定义之前，需要补充一个知识：宏实参替换发生在形参代入之前
-
-### 宏实参替换发生在形参代入之前
-
-举个小例子
-
-```C
-#define DEBUG 1
-#define concat_temp(x, y) x ## y
-
-concat_temp(1, DEBUG)
-```
-
-编译器在处理 `concat_temp(1, DEBUG)` 的时候分几步：
-
-1. 先找到宏调用
-
-   预处理器看到 `concat_temp(1, DEBUG)`，知道它是个宏调用。
-
-2. 先展开实参
-
-   规则：**实参在传给形参之前，要先各自展开（除非被 `#` 或 `##` 操作符保护）**。
-
-   - 第一个实参是 `1`，它不是宏，展开后还是 `1`。
-   - 第二个实参是 `DEBUG`，它是宏，展开成 `1`。
-
-   所以得到：
-
-   ```C
-   concat_temp(1, 1)
-   ```
-
-   这一步就是“实参替换发生在形参代入之前”。
-
-3. 再把形参代入宏体
-
-   宏体为
-
-   ```C
-   x ## y
-   ```
-
-   得到：
-
-   ```C
-   1 ## 1
-   ```
-
-   最终结果：
-
-   ```C
-   11
-   ```
-
-### 展开`IFDEF(DEBUG， printf("DEBUG\n");)`
-
-有了上面`实参先展开后再传入形参`的知识背景后，我们继续分析这个语句最终被展开为什么了。
-
-```C
-#define DEBUG 1
-IFDEF(DEBUG， printf("DEBUG\n");)
-
-// 实参 DEBUG 先展开为 1 再传入
-= MUXDEF(1, __KEEP, __IGNORE)(printf("DEBUG\n");)
-= MUX_MACRO_PROPERTY(__P_DEF_, 1, __KEEP, __IGNORE)(printf("DEBUG\n");)
-= MUX_WITH_COMMA(concat(__P_DEF_, 1), __KEEP, __IGNORE)(printf("DEBUG\n");)
-= MUX_WITH_COMMA(__P_DEF_1, __KEEP, __IGNORE)(printf("DEBUG\n");)
-
-// 实参 __P_DEF_1 先展开为 'X,' 再传入。这里注意多了个逗号
-= MUX_WITH_COMMA(X,, __KEEP, __IGNORE)(printf("DEBUG\n");)
-= CHOOSE2nd(X, __KEEP, __IGNORE)(printf("DEBUG\n");)
-= __KEEP(printf("DEBUG\n");)
-
-= printf("DEBUG\n");
-```
-
-而仔细分析可以得知：
-
-- 当宏被声明并定义为值 1 或者 0 的时候，才能在`IFDEF`宏中执行后面的语句
-- 如果宏没有被声明，或者定义的值不为 1 或 0，那么`IFDEF`宏就不会执行后面的语句 
+参考 [Macro_Expansion](/home/crx/Notes/30_KnowHow/C_Macro_Expansion.md)
 
 ## 参数从哪里来
 
