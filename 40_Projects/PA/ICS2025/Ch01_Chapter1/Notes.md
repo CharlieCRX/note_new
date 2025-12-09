@@ -402,11 +402,43 @@ void isa_reg_display() {
 
 这里首先需要理解，客户计算机的内存是什么维护的和如何访问的。
 
-- 在[ 准备第一个客户程序](https://nju-projectn.github.io/ics-pa-gitbook/ics2025/1.3.html#%E5%87%86%E5%A4%87%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%AE%A2%E6%88%B7%E7%A8%8B%E5%BA%8F)章节中，提到了 NEMU 的内存实际上是由`uint8_t`类型的数组`pmem[]`来维护的。
+在[ 准备第一个客户程序](https://nju-projectn.github.io/ics-pa-gitbook/ics2025/1.3.html#%E5%87%86%E5%A4%87%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%AE%A2%E6%88%B7%E7%A8%8B%E5%BA%8F)章节中，提到了 :
 
-- 对应访问内存的方法，就是使用`nemu/src/memory/paddr.c`中的`guest_to_host()`函数。
+> 内存通过在`nemu/src/memory/paddr.c`中定义的大数组`pmem`来模拟. 在客户程序运行的过程中, 总是使用`vaddr_read()`和`vaddr_write()` (在`nemu/src/memory/vaddr.c`中定义)来访问模拟的内存. vaddr, paddr分别代表虚拟地址和物理地址. 
 
-例如访问内存地址为`0x8000 0004`的数据，最终访问的就是`pmem[4]`的数据，也就是第二条指令（riscv32的每条指令长度为 4 个字节）。
+所以我们可以使用`vaddr_read()`来访问客户机的虚拟内存。下一步就是确定模拟内存的合法空间。
+
+内存的起始地址为：`0x80000000`；空间大小为：`0x8000000`。所以合法空间为`[0x80000000, 0x88000000]`
+
+理解了内存是如何访问的，那么看下取出的数据输出格式：
+
+> 求出表达式`EXPR`的值, 将结果作为起始内存地址, 以十六进制形式输出连续的`N`个4字节
+
+输出的格式为：
+
+- N 个数据
+- 十六进制
+- 每个数据大小为 4 字节
+
+这样对应的`gdb`内存输出命令格式类似为：
+
+```bash
+(gdb) x/10xw 0x7fffffffdd58
+0x7fffffffdd58: 0xffffe0f1      0x00007fff      0xffffe12d      0x00007fff
+0x7fffffffdd68: 0x00000000      0x00000000      0xffffe163      0x00007fff
+0x7fffffffdd78: 0xffffe173      0x00007fff
+```
+
+综上，我们要实现的循环打印 N 个内存数据主要逻辑有：
+
+1. 通过`vaddr_read()`读取 32 位的数据
+2. 以 16 进制的格式输出
+3. 内存前进 4 个字节
+
+然后格式上尽量与 `gdb` 输出的格式类似：
+
+1. 首先以 16 进制的格式，输出地址
+2. 然后每 4 个 32 位（4字节）的数据一行输出打印
 
 
 
