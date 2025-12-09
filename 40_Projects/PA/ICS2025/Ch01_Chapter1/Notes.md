@@ -45,7 +45,7 @@ NEMU中通过C代码实现了这个基本的计算机，称之为“客户计算
 IFDEF(DEBUG, printf("Test IFDEF"));
 ```
 
-参考 [Macro_Expansion](/home/crx/Notes/30_KnowHow/C_Macro_Expansion.md)
+参考 [Macro_Expansion](../../../../30_KnowHow/C语言/C_Macro_Expansion.md)
 
 ## 参数从哪里来
 
@@ -361,23 +361,52 @@ rbx            0x7fffffffe158      140737488347480
 ...
 ```
 
-格式类似于：
+格式：
 
-```bash
-[寄存器名称]       [保存的数据以十六进制展示]     [保存的数据以十进制展示]
-```
+- 十六进制不补 0
+
+- 整体宽度依旧保持一致
+
+- 不等长的 hex 输出右侧补空格，使列对齐
+
+  例如
+
+  ```bash
+  0x0       
+  0xa       
+  0x1234    
+  0x12345678
+  ```
 
 示例实现：
 
 ```C
 void isa_reg_display() {
-  // 输出所有通用寄存器的值
-  for (int i = 0; i < 32; i++) {
-    printf("%-3s: 0x%-8x    %-d\n", regs[i], cpu.gpr[i], cpu.gpr[i]);
+  for (int i = 0; i < 32; i ++) {
+    uint32_t val = gpr(i);
+
+    char hexbuf[16];
+    sprintf(hexbuf, "0x%x", val);   // 不补零
+
+    printf("%s\t%-10s\t%d\n", reg_name(i), hexbuf, val);
   }
 
-  // 输出程序计数器的值
-  printf("pc : 0x%08x    %-10d\n", cpu.pc, cpu.pc);
+  char pcbuf[16];
+  sprintf(pcbuf, "0x%x", cpu.pc);
+
+  printf("pc\t%-10s\t%d\n", pcbuf, cpu.pc);
 }
 ```
+
+### 访问客户计算机的内存数据
+
+这里首先需要理解，客户计算机的内存是什么维护的和如何访问的。
+
+- 在[ 准备第一个客户程序](https://nju-projectn.github.io/ics-pa-gitbook/ics2025/1.3.html#%E5%87%86%E5%A4%87%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%AE%A2%E6%88%B7%E7%A8%8B%E5%BA%8F)章节中，提到了 NEMU 的内存实际上是由`uint8_t`类型的数组`pmem[]`来维护的。
+
+- 对应访问内存的方法，就是使用`nemu/src/memory/paddr.c`中的`guest_to_host()`函数。
+
+例如访问内存地址为`0x8000 0004`的数据，最终访问的就是`pmem[4]`的数据，也就是第二条指令（riscv32的每条指令长度为 4 个字节）。
+
+
 
