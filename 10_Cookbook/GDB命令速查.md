@@ -56,6 +56,7 @@ list 100,150            # 查看范围
 print var               # 打印变量
 print *ptr              # 打印指针指向的内容
 ptype var               # 查看类型
+p (char*)ptr           # 从指定地址打印字符串
 
 info locals             # 查看局部变量
 info args               # 参数变量
@@ -71,7 +72,6 @@ set print pretty on     # 结构体美化输出
 GDB 查看内存主要使用命令：
 
 ```
-
 x /Nfu ADDRESS
 ```
 
