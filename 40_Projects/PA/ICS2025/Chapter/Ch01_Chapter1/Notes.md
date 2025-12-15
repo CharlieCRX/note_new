@@ -45,7 +45,7 @@ NEMU中通过C代码实现了这个基本的计算机，称之为“客户计算
 IFDEF(DEBUG, printf("Test IFDEF"));
 ```
 
-参考 [Macro_Expansion](../../../../30_KnowHow/C语言/C_Macro_Expansion.md)
+参考 [Macro_Expansion](../../../../../30_KnowHow/C语言/C_Macro_Expansion.md)
 
 ## 参数从哪里来
 
@@ -459,3 +459,8 @@ void isa_reg_display() {
 > ❗地址合法性判断由 vaddr_read() / paddr_read() 完成
 
 ## 表达式求值
+
+### 词法分析
+
+将表达式拆成一个个的基础单元，方便后续求值处理。具体分析请看 [词法分析（Lexical Analysis）](../../Topics/Expr/01-Lexical.md)章节
+
