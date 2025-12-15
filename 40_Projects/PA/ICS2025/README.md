@@ -2,18 +2,54 @@
 
 来源: [南京大学 计算机科学与技术系 计算机系统基础 课程实验 2025](https://nju-projectn.github.io/ics-pa-gitbook/ics2025/index.html)
 
-## 使用说明
+## 笔记结构
 
-- 每个章节单独一个目录  
-- 每个章节包含 Notes / Exercises / References 三个文件  
-- Notes: 记录学习内容与心得  
-- Exercises: 记录课后练习 / 实验 / 思考题 /代码  
-- References: 记录参考资料、链接、源码片段  
+```bash
+ICS2025/
+├── README.md                # 学习路线 & 索引（非常重要）
+│
+├── Chapters/                # ⬅ 保留教材映射
+│   └── Ch01_Chapter1/
+│       ├── Exercises.md
+│       └── Notes.md         # 只放“章节概览 + 指向 Topic”
+│
+├── Topics/                  # ⭐ 真正的知识主干
+│   ├── Monitor/
+│   │   ├── Overview.md
+│   │   └── MemoryScan.md
+│   │
+│   ├── Expr/
+│   │   ├── 00-Overview.md
+│   │   ├── 01-Lexical.md    # 你现在这块
+│   │   ├── 02-Parser.md
+│   │   ├── 03-Eval.md
+│   │   └── Test.md
+│   │
+│   └── Memory/
+│       ├── Overview.md
+│       └── Addressing.md
+│
+├── Code/
+│   └── expr/
+│       └── mock_expr.c
+│
+└── References/
+    ├── regex.md
+    └── nemu-memory.md
 
-## 目录  
-- [Ch01_Chapter1](Ch01_Chapter1/Notes.md)
-- [Ch02_Chapter2](Ch02_Chapter2/Notes.md)
-- [Ch03_Chapter3](Ch03_Chapter3/Notes.md)
-- [Ch04_Chapter4](Ch04_Chapter4/Notes.md)
-- [Ch05_Chapter5](Ch05_Chapter5/Notes.md)
+```
+
+## 写笔记时该怎么选“放哪儿”
+
+| 内容类型         | 放哪里     |
+| ---------------- | ---------- |
+| 我今天学了第几章 | Chapters   |
+| 机制理解         | Topics     |
+| 工程实现         | Topics     |
+| 实验代码         | Code       |
+| 零散资料         | References |
+
+## 目标
+
+- PA 的笔记不是“代码复刻”，而是“认知结构 + 决策理由 + 可复用模式”
 
