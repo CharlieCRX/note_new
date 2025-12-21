@@ -298,8 +298,6 @@ void run_all_tests(TestCase *cases, int n) {
 }
 
 
-int main() {
-  init_regex();
 	// 测试用例 1：1+2+3
   int types1[] = {TK_DEC, '+', TK_DEC, '+', TK_DEC};
   const char *strs1[] = {"1", "+", "2", "+", "3"};
@@ -570,7 +568,11 @@ TestCase case_too_long = {
 };
 
 
+// ----------------- 检测括号匹配度 ----------------
 
+
+int main() {
+  init_regex();
 	// 批量运行所有测试
 
   // 测试套件：把所有用例放入数组
