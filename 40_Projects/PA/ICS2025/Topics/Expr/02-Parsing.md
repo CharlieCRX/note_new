@@ -280,7 +280,7 @@ eval(p, q) {
 }
 ```
 
-可以确定 token 表达式中寻找主运算符号函数的输入和输出。按照“寻找优先级最低”的原则，确定输入输出：
+按照“寻找优先级最低”的原则，确定寻找 **二元主运算符** 函数的输入输出：
 
 #### 1. 输入
 
@@ -323,7 +323,7 @@ typedef struct {
 
 #### 2. 核心测试场景
 
-- 绿色场景：
+- 通过（绿灯）场景：
 
   ```tex
   // 不带括号的场景
@@ -342,7 +342,7 @@ typedef struct {
   (1 + 2 - 3) * 4
   ```
 
-- 异常场景：
+- 异常（红灯）场景：
 
   ```tex
   // 没有运算符
@@ -391,6 +391,8 @@ static int find_main_operator(int start, int end) {
 
 #### 1. 如何区分负号和减号 🎭
 
+首先举例减号和负号的场景，然后分析不同的特性：
+
 ```
 // 减号
 1 - 2				// 1. 减号的左边 token 为数字、标识符
@@ -435,9 +437,9 @@ static int find_main_operator(int start, int end) {
 
 所以我们选择 二元优先 的处理策略。
 
-3.纯粹的“二元运算符探测器”
+#### 3.纯粹的“二元运算符探测器”
 
-之前的寻找主运算符函数`find_main_operator`仅仅是为了服务于二元运算符的结构，寻找一个“主运算符”把表达式劈成左右两半（val1+val2）。
+之前的寻找主运算符函数`find_main_operator`仅仅是为了服务于二元运算符的结构，寻找一个“主运算符”把表达式劈成左右两半（val1`op`val2）。
 
 而实现这个简单的功能，仅需要考虑符号本身以及其对应的优先级即可。对应的函数`find_main_operator`的辅助函数仅有以下两个函数支持即可：
 
@@ -477,7 +479,7 @@ bool has_higher_precedence(int op1, int op2);
 
 ### 3.5 纯粹的获取主运算符函数
 
-贴一下增加了精确1识别二元运算符`find_main_operator`的实现：
+贴一下增加了精确识别二元运算符`find_main_operator`的实现：
 
 ```C
 static int find_main_operator(int start, int end) {
