@@ -15,7 +15,7 @@ eval(p, q) {
      * Return the value of the number.
      */
   }
-  else if (check_parentheses(p, q) == true) {
+      else if (check_parentheses(p, q) == true) {
     /* The expression is surrounded by a matched pair of parentheses.
      * If that is the case, just throw away the parentheses.
      */
@@ -117,9 +117,11 @@ bool is_paren = check_parentheses(p, q, &err);
 
 ### 1.2  :construction_worker: 程序员错误 vs :keyboard: 外部输入
 
+#### (1) `assert(0)`的拒绝沟通:speak_no_evil:
+
 当前`eval()`结构中，发现非法表达式的时候使用`assert(0)`终止程序。`assert(0)` 的语义是：
 
-> **“这是程序员不可能犯的错误”**
+> **“这是程序员不可能犯的错误”**:speak_no_evil:
 
 但是现在`eval()`需要面对的表达式来源可能是：
 
@@ -134,12 +136,120 @@ bool is_paren = check_parentheses(p, q, &err);
 所以原来（教学阶段）：
 
 > `eval()`
->  👉 *假设输入合法，否则程序终止*
+> 👉 *假设输入合法，否则程序终止*
 
 现在（工程阶段）：
 
 > `eval()`
->  👉 *在不可信输入下，尝试求值；失败则返回明确错误*
+> 👉 *在不可信输入下，尝试求值；失败则返回明确错误*
 
 这一步，决定了我们**必须引入错误码**。
 
+### 1.3 推荐`eval()`的整体设计方案
+
+#### 1️⃣ 定义表达式求值错误码
+
+```C
+typedef enum {
+    EVAL_OK = 0,
+
+    EVAL_ERR_INVALID_RANGE,      // p > q
+    EVAL_ERR_BAD_EXPRESSION,     // 无法解析为合法表达式
+    EVAL_ERR_PAREN_MISMATCH,     // 括号结构错误
+    EVAL_ERR_PAREN_EMPTY,        // ()
+    EVAL_ERR_DIV_ZERO,           // 除零
+    // 后续可扩展
+} EvalErrType;
+```
+
+👉 **注意：这是“求值层错误码”，不是括号层**
+
+#### 2️⃣ 修改 `eval` 的函数签名（关键一步）
+
+❌ 旧设计（不可恢复错误）
+
+```C
+int eval(int p, int q);
+```
+
+✅ 新设计（可恢复错误）
+
+```c
+EvalErrType eval(int p, int q, word_t *result);
+```
+
+含义：
+
+- 返回值：**是否成功 / 失败原因**
+- `result`：仅在 `EVAL_OK` 时有效
+
+#### 3️⃣ `eval` 的结构应该变成“错误向上传播”
+
+推荐框架（伪代码级）
+
+```C
+EvalErrType eval(int p, int q, word_t *res) {
+  if (p > q) {
+    return EVAL_ERR_INVALID_RANGE;
+  }
+
+  if (p == q) {
+    if (!is_number(p)) {
+      return EVAL_ERR_BAD_EXPRESSION;
+    }
+    *res = token_value(p);
+    return EVAL_OK;
+  }
+
+  ParenErrType perr;
+  bool is_paren = check_parentheses(p, q, &perr);
+
+  if (is_paren) {
+    return eval(p + 1, q - 1, res);
+  }
+
+  /* 括号相关的“致命结构错误” */
+  if (perr == PAREN_ERR_MISMATCH) {
+    return EVAL_ERR_PAREN_MISMATCH;
+  }
+  if (perr == PAREN_ERR_EMPTY) {
+    return EVAL_ERR_PAREN_EMPTY;
+  }
+  if (perr == PAREN_ERR_INVALID_RANGE) {
+    return EVAL_ERR_INVALID_RANGE;
+  }
+
+  /* NOT_WRAP → 普通表达式处理 */
+  int op = find_main_operator(p, q);
+  if (op < 0) {
+    return EVAL_ERR_BAD_EXPRESSION;
+  }
+
+  word_t val1, val2;
+  EvalErrType err;
+
+  err = eval(p, op - 1, &val1);
+  if (err != EVAL_OK) {
+    return err;
+  }
+
+  err = eval(op + 1, q, &val2);
+  if (err != EVAL_OK) {
+    return err;
+  }
+
+  if (token[op] == '/' && val2 == 0) {
+    return EVAL_ERR_DIV_ZERO;
+  }
+
+  *res = apply_operator(op, val1, val2);
+  return EVAL_OK;
+}
+```
+
+这份 `eval()` 结构是**非常成熟的工程级写法**：
+
+- ✔ **返回错误码而不是 assert**
+- ✔ **错误一层层向上传播**
+- ✔ `check_parentheses` 只负责**结构判定**，不混业务
+- ✔ `eval` 是一个**纯计算 + 错误传播函数**
