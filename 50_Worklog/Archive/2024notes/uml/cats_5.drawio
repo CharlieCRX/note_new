@@ -1,0 +1,89 @@
+<mxfile host="app.diagrams.net" modified="2024-03-22T12:53:57.697Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36" etag="htRULlGE-L4ZMaK-Idpr" version="24.0.7" type="device">
+  <diagram name="第 1 页" id="MizgGOxtH2WQLVwWoABV">
+    <mxGraphModel dx="972" dy="570" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="4GMjOr6IgQa2VNYJ8yb2-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="4GMjOr6IgQa2VNYJ8yb2-1" target="4GMjOr6IgQa2VNYJ8yb2-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4GMjOr6IgQa2VNYJ8yb2-1" value="typed_word" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="20" y="30" width="90" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4GMjOr6IgQa2VNYJ8yb2-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="4GMjOr6IgQa2VNYJ8yb2-2" target="4GMjOr6IgQa2VNYJ8yb2-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4GMjOr6IgQa2VNYJ8yb2-2" value="遍历word_list与输入的typed_word进行匹配" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="5" y="120" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4GMjOr6IgQa2VNYJ8yb2-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="4GMjOr6IgQa2VNYJ8yb2-4" target="4GMjOr6IgQa2VNYJ8yb2-9">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="225" y="430" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4GMjOr6IgQa2VNYJ8yb2-37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="4GMjOr6IgQa2VNYJ8yb2-4" target="4GMjOr6IgQa2VNYJ8yb2-36">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4GMjOr6IgQa2VNYJ8yb2-4" value="是否匹配" style="rhombus;whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="170" y="120" width="80" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4GMjOr6IgQa2VNYJ8yb2-9" value="返回typed_word" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="165" y="330" width="90" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4GMjOr6IgQa2VNYJ8yb2-10" value="否" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="541" y="230" width="40" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="4GMjOr6IgQa2VNYJ8yb2-12" value="否" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="250" y="120" width="40" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="4GMjOr6IgQa2VNYJ8yb2-33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="4GMjOr6IgQa2VNYJ8yb2-13" target="4GMjOr6IgQa2VNYJ8yb2-32">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4GMjOr6IgQa2VNYJ8yb2-13" value="diff_function处理" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="457" y="120" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4GMjOr6IgQa2VNYJ8yb2-14" value="返回拥有lowest diff nums的word" style="ellipse;whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="637" y="420" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="4GMjOr6IgQa2VNYJ8yb2-22" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="4GMjOr6IgQa2VNYJ8yb2-19" target="4GMjOr6IgQa2VNYJ8yb2-21">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="503" y="250" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4GMjOr6IgQa2VNYJ8yb2-35" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="4GMjOr6IgQa2VNYJ8yb2-19" target="4GMjOr6IgQa2VNYJ8yb2-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4GMjOr6IgQa2VNYJ8yb2-19" value="是否满足最低修正条件？" style="rhombus;whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="647" y="230" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="4GMjOr6IgQa2VNYJ8yb2-21" value="返回typed_word" style="ellipse;whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="448" y="340" width="110" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="4GMjOr6IgQa2VNYJ8yb2-23" value="min(num_list) &amp;gt; limit" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="496" y="250" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="4GMjOr6IgQa2VNYJ8yb2-25" value="是" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="727" y="330" width="40" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="4GMjOr6IgQa2VNYJ8yb2-26" value="min(num_list) &amp;lt;= limit" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="687" y="360" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="4GMjOr6IgQa2VNYJ8yb2-31" value="是" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="170" y="220" width="40" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="4GMjOr6IgQa2VNYJ8yb2-34" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="4GMjOr6IgQa2VNYJ8yb2-32" target="4GMjOr6IgQa2VNYJ8yb2-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4GMjOr6IgQa2VNYJ8yb2-32" value="得到差异数量表diff_nums" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="627" y="120" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4GMjOr6IgQa2VNYJ8yb2-38" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="4GMjOr6IgQa2VNYJ8yb2-36" target="4GMjOr6IgQa2VNYJ8yb2-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4GMjOr6IgQa2VNYJ8yb2-36" value="循环获取word_list单词source_word" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="120" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
