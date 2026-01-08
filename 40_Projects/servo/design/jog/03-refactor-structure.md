@@ -41,7 +41,7 @@
 
 ## 定义 StopReason
 
-首先可以先定义在 `MotorCtrl` 里定义：
+首先可以先在 `MotorCtrl` 里定义：
 
 ```C++
 enum class JogStopReason {
