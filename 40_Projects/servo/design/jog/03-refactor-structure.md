@@ -76,6 +76,19 @@ enum class JogStopReason {
 struct JogStopEvent {
     JogStopReason reason = JogStopReason::None;
     int motorID = -1;
+    
+    // 默认构造函数
+    JogStopEvent() = default;
+    
+    // 两个参数的构造函数
+    constexpr JogStopEvent(JogStopReason r, int id = -1) noexcept 
+        : reason(r), motorID(id) {}
+    
+    // 检查是否有停止事件
+    bool hasEvent() const { return reason != JogStopReason::None; }
+    
+    // 获取描述信息
+    QString toString() const;
 };
 ```
 
@@ -104,16 +117,18 @@ struct JogStopEvent {
 ### 示例：双电机同步
 
 ```C++
-JogStopEvent MotorCtrl::checkDualMotorState()
+MotorCtrl::JogStopEvent MotorCtrl::checkDualMotorState()
 {
     float v1, v2;
     if (isX1X2NotSync(&v1, &v2)) {
-        return { JogStopReason::DualMotorOutOfSync, M_ALL };
+        return JogStopEvent(JogStopReason::DualMotorOutOfSync, M_ALL);
     }
     if (isX1X2NotEnableOnTime()) {
-        return { JogStopReason::DualMotorEnableTimeout, M_ALL };
+        return JogStopEvent(JogStopReason::DualMotorEnableTimeout, M_ALL);
     }
-    return {};
+    
+    // 返回默认构造的事件（无事件）
+    return JogStopEvent();
 }
 ```
 
@@ -125,13 +140,14 @@ JogStopEvent MotorCtrl::checkDualMotorState()
 JogStopEvent MotorCtrl::checkSoftLimit(int motorID)
 {
     float curr = getLocation(motorID) * DbCtrl::m_servoMotor_tb.at(motorID).dir;
+    float minLimit = DbCtrl::m_servoMotor_tb.at(motorID).minLimit;
+    float maxLimit = DbCtrl::m_servoMotor_tb.at(motorID).maxLimit;
 
-    if ((m_jog_dir < 0 && curr <= DbCtrl::m_servoMotor_tb.at(motorID).minLimit + 20) ||
-        (m_jog_dir > 0 && curr >= DbCtrl::m_servoMotor_tb.at(motorID).maxLimit - 20)) {
-
-        return { JogStopReason::ExceedSoftLimit, motorID };
+    if ((m_jog_dir < 0 && curr <= minLimit + 20) ||
+        (m_jog_dir > 0 && curr >= maxLimit - 20)) {
+        return JogStopEvent(JogStopReason::ExceedSoftLimit, motorID);
     }
-    return {};
+    return JogStopEvent();
 }
 ```
 
@@ -144,12 +160,14 @@ JogStopEvent MotorCtrl::checkPhysicalLimit(int motorID)
 {
     quint16 speed = 0;
     if (!getCurrentMotorActualSpeed(motorID, speed)) {
-        return { JogStopReason::SpeedReadFailed, motorID };
+        return JogStopEvent(JogStopReason::SpeedReadFailed, motorID);
     }
+    
     if (speed < 1) {
-        return { JogStopReason::ExceedPhysicalLimit, motorID };
+        return JogStopEvent(JogStopReason::ExceedPhysicalLimit, motorID);
     }
-    return {};
+    
+    return JogStopEvent();
 }
 ```
 
@@ -160,16 +178,24 @@ JogStopEvent MotorCtrl::checkPhysicalLimit(int motorID)
 ### X1X2 运动时
 
 ```C++
-JogStopEvent MotorCtrl::checkXZObstacleForXAxis(int motorID)
+JogStopEvent MotorCtrl::checkXZObstacleForXAxis()
 {
-    if (!isXZObstacleEnabled()) return {};
-
-    if (isZAxisTooHigh()) {
-        if (xAxisReachObstacleLimit(motorID)) {
-            return { JogStopReason::XZ_CantPassObstacle_ZAxisTooHigh, motorID };
-        }
+    // 检查是否启用XZ障碍物逻辑
+    if (!isXZObstacleEnabled()) {
+        return JogStopEvent();
     }
-    return {};
+    
+    // 判断Z轴是否过高
+    if (!isZAxisTooHigh()) {
+        return JogStopEvent();
+    }
+    
+    // 检查X轴是否到达障碍物限制
+    if (xAxisReachObstacleLimit()) {
+        return JogStopEvent(JogStopReason::XZ_CantPassObstacle_ZAxisTooHigh, M_ALL);
+    }
+    
+    return JogStopEvent();
 }
 ```
 
@@ -180,12 +206,17 @@ JogStopEvent MotorCtrl::checkXZObstacleForXAxis(int motorID)
 ```C++
 JogStopEvent MotorCtrl::checkXZObstacleForZAxis()
 {
-    if (!isXZObstacleEnabled()) return {};
-
-    if (!isX1X2InSafeZone()) {
-        return { JogStopReason::XZ_CantPassObstacle_XAxisNotInSafeZone, M_Z1 };
+    // 检查是否启用XZ障碍物逻辑
+    if (!isXZObstacleEnabled()) {
+        return JogStopEvent();
     }
-    return {};
+    
+    // 检查X轴是否在安全区域
+    if (isX1X2InSafeZone()) {
+        return JogStopEvent();
+    }
+    
+    return JogStopEvent(JogStopReason::XZ_CantPassObstacle_XAxisNotInSafeZone, M_Z1);
 }
 ```
 
@@ -199,25 +230,49 @@ JogStopEvent MotorCtrl::checkXZObstacleForZAxis()
 
 ```C++
 for (int motorID = 0; motorID < MAX_MOTOR_COUNT; ++motorID) {
-    if (!m_needCheck.at(motorID)) continue;
-
-    if (auto ev = checkDualMotorState(); ev.reason != JogStopReason::None)
-        return stopJog(ev);
-
-    if (auto ev = checkSoftLimit(motorID); ev.reason != JogStopReason::None)
-        return stopJog(ev);
-
-    if (auto ev = checkPhysicalLimit(motorID); ev.reason != JogStopReason::None)
-        return stopJog(ev);
-
-    if (isXAxis(motorID)) {
-        if (auto ev = checkXZObstacleForXAxis(motorID); ev.reason != JogStopReason::None)
-            return stopJog(ev);
+    // 检查是否有电机需要监控
+    if (!m_needCheck.at(motorID)) {
+        continue;
     }
 
-    if (isZAxis(motorID)) {
-        if (auto ev = checkXZObstacleForZAxis(); ev.reason != JogStopReason::None)
+    anyMotorCheckedInThisCycle = true;
+
+    // ===================== 规则流水线 =====================
+    
+    // 1. 双电机状态检查
+    if (m_funSl_btgrp->checkedId() == FrontBack && 
+        m_frontBackModel_btgrp->checkedId() == BothMotors) {
+        if (auto ev = checkDualMotorState(); ev.hasEvent()) {
             return stopJog(ev);
+        }
+    } else {
+        // 单电机模式：刷新当前位置
+        QLOG_INFO() << "刷新电机当前位置...";
+        refreshRealLoc(motorID);
+    }
+
+    // 2. 软件限位检查
+    if (auto ev = checkSoftLimit(motorID); ev.hasEvent()) {
+        return stopJog(ev);
+    }
+
+    // 3. 物理限位/速度异常检查
+    if (auto ev = checkPhysicalLimit(motorID); ev.hasEvent()) {
+        return stopJog(ev);
+    }
+
+    // 4. X轴障碍物协同检查（只在需要时检查）
+    if (is_z1_out_saftey_area && isXAxis(motorID)) {
+        if (auto ev = checkXZObstacleForXAxis(motorID); ev.hasEvent()) {
+            return stopJog(ev);
+        }
+    }
+
+    // 5. Z轴障碍物协同检查
+    if (isZAxis(motorID)) {
+        if (auto ev = checkXZObstacleForZAxis(); ev.hasEvent()) {
+            return stopJog(ev);
+        }
     }
 }
 ```
@@ -232,12 +287,18 @@ void MotorCtrl::stopJog(const JogStopEvent& ev)
     m_allDone = true;
     actionJogStop();
 
+    // 记录日志
     QLOG_WARN() << jogStopReasonToString(ev);
 
+    // 弹出对话框
     SMessageBox::sQdialogBoxOk(
         this,
         QMessageBox::Critical,
         jogStopReasonToHumanReadable(ev)
     );
+
+    // 原循环结束后的动作
+    QLOG_INFO()<<QString("行车点动运行结束.");
+    emit em_jogDone(true);
 }
 ```
