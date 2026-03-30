@@ -1,233 +1,235 @@
-# 系统架构设计说明
+------
 
-## 1. 项目背景
+# 一、servoV6 项目总纲（升级版）
 
-本项目为真实生产环境使用的工业控制系统。
+你当前的架构已经是对的（而且很高级），核心是：
 
-功能包括：
+> Clean Architecture + 工业控制建模 + TDD
 
-- PLC 通信（Modbus TCP）
-- 伺服控制
-- 位置读取与运动控制
-- 状态监控与报警处理
-- QtQuick 人机界面
+但还不够“工程化”。
 
-目标：
+我帮你升级为 **6层结构（关键升级点）**：
 
-- 长期稳定运行
-- 可扩展多设备
-- 易于维护与测试
-- 分层清晰，避免协议污染业务逻辑
+------
 
----
+## 🧱 1. 最终推荐架构（重要）
 
-## 2. 总体架构分层
+```text
+UI（Qt/QML）
+↓
+Presentation（ViewModel）
+↓
+Application（UseCase）
+↓
+Domain（核心模型）
+↓
+Domain Service（领域服务） ⭐新增
+↓
+Infrastructure（通信/驱动）
+```
 
-系统采用 Clean Architecture 分层模型。
+------
 
-### 2.1 分层结构
+## ⚠️ 为什么要加 Domain Service？
 
-UI 层  
-→ Application 层  
-→ Domain 层  
-→ Infrastructure 层  
+你现在的风险是：
 
-### 2.2 依赖方向
+👉 UseCase 变“上帝类”
+👉 Domain 变“贫血模型”
 
-- UI 依赖 Application
-- Application 依赖 Domain
-- Infrastructure 实现 Domain 定义的接口
-- Domain 不依赖任何具体实现
+所以必须拆出：
 
-严禁反向依赖。
+```text
+Domain：状态 + 行为（对象内）
+DomainService：跨对象逻辑（规则/算法）
+```
 
----
+------
 
-## 3. 各层职责说明
+# 二、项目模块大纲（真正能开发的结构）
 
-### 3.1 UI 层（QtQuick）
+我按“可落地目录”给你：
 
-职责：
+------
 
-- 展示界面
-- 用户输入
-- 状态绑定
-- 不包含业务逻辑
-- 不包含通信逻辑
+## 📂 1. UI 层（Qt/QML）
 
-UI 通过 ViewModel / Application Service 与下层交互。
+```text
+ui/
+├── pages/
+│   ├── AxisPage.qml
+│   ├── GantryPage.qml
+│
+├── components/
+│   ├── AxisControlPanel.qml
+│   ├── AlarmIndicator.qml
+```
 
----
+👉 对应你的需求：单轴 / X1X2 / 报警显示
 
-### 3.2 Application 层
+------
 
-职责：
+## 📂 2. Presentation（ViewModel）
 
-- 协调领域对象
-- 处理用例（Use Case）
-- 管理操作流程
-- 连接 UI 与 Domain
-
-例如：
-
-- ConnectPlcUseCase
-- MoveServoUseCase
-- ReadPositionUseCase
-
-Application 不处理寄存器细节。
-
----
-
-### 3.3 Domain 层
+```text
+presentation/
+├── AxisViewModel
+├── GantryViewModel
+├── SystemViewModel
+```
 
 职责：
 
-- 表达业务规则
-- 定义领域对象
-- 定义接口抽象
-- 管理状态机
+```text
+UI → UseCase
+Domain → UI数据转换
+```
 
-示例对象：
+------
 
-- PlcDevice
-- ServoMotor
-- Axis
-- MoveCommand
-- AlarmState
+## 📂 3. Application（UseCase）
 
-Domain 层禁止：
+```text
+application/
+├── axis/
+│   ├── JogAxisUseCase
+│   ├── MoveAbsoluteUseCase
+│   ├── MoveRelativeUseCase
+│   ├── StopAxisUseCase
+│
+├── system/
+│   ├── ConnectPlcUseCase
+│   ├── ResetAlarmUseCase
+```
 
-- Qt 类型
-- Modbus 类型
-- 网络 API
+核心特点：
 
----
+```text
+流程控制（不是业务逻辑）
+```
 
-### 3.4 Infrastructure 层
+------
 
-职责：
+## 📂 4. Domain（核心模型）
 
-- 实现通信接口
-- 实现 Modbus TCP
-- 实现具体数据读写
-- 处理网络异常
-- 数据转换与寄存器映射
+```text
+domain/
+├── entity/
+│   ├── Axis
+│   ├── GantryAxis（X1X2）
+│   ├── Motor
+│
+├── value/
+│   ├── Position
+│   ├── Speed
+│   ├── AxisState
+│
+├── command/
+│   ├── MoveCommand
+│   ├── JogCommand
+```
 
-示例：
+👉 这里是你C++能力提升核心区
 
-- ModbusTcpTransport
-- PlcRegisterMapper
+------
 
-Infrastructure 不能包含业务规则。
+## 📂 5. ⭐ Domain Service（新增核心）
 
----
+```text
+domain/service/
+├── AxisMotionPlanner
+├── GantrySyncChecker
+├── AlarmEvaluator
+```
 
-## 4. 通信模型设计
+### 举例：
 
-### 4.1 通信抽象
+```cpp
+class GantrySyncChecker
+{
+public:
+    bool isOutOfTolerance(double x1, double x2, double limit);
+};
+```
 
-Domain 定义接口：
+👉 这就是你 X1X2 “超差报警”的正确归属
 
-- ITransport
-- IPlcGateway
+------
 
-Infrastructure 实现：
+## 📂 6. Infrastructure
 
-- ModbusTcpTransport
-- MockTransport（测试用）
+```text
+infrastructure/
+├── transport/
+│   ├── ModbusTcpTransport
+│
+├── gateway/
+│   ├── AxisGateway
+│
+├── mapping/
+│   ├── RegisterMap
+```
 
----
+👉 所有 PLC 地址都只能在这里
 
-### 4.2 寄存器映射策略
+------
 
-所有寄存器地址统一集中管理。
+## 📂 7. HAL（你提出的重点）
 
-禁止在多个模块硬编码寄存器地址。
+这是你可以“加分”的地方👇
 
-建议建立：
+```text
+hal/
+├── IAxisDriver
+├── PlcAxisDriver
+├── SimulatedAxisDriver（测试）
+```
 
-- RegisterMap 结构
-- 地址常量统一维护
+👉 价值：
 
----
+```text
+UI / UseCase 完全不关心 PLC
+未来可接 ARM / EtherCAT
+```
 
-## 5. 线程模型
+------
 
-建议模型：
+## 📂 8. Tests（必须重点做）
 
-- 通信线程独立
-- UI 线程只做展示
-- Application 层协调跨线程数据
+```text
+tests/
+├── domain/
+├── application/
+```
 
-禁止：
+------
 
-- UI 线程直接访问网络
-- Domain 中处理线程切换
+# 三、核心数据流
 
----
+## 控制流：
 
-## 6. 状态管理模型
+```text
+UI
+→ ViewModel
+→ UseCase
+→ Domain
+→ DomainService
+→ Gateway
+→ PLC
+```
 
-所有设备状态必须显式建模：
+------
 
-- 未连接
-- 已连接
-- 运动中
-- 报警
-- 故障
+## 状态回读：
 
-禁止使用布尔变量拼凑状态。
+```text
+PLC
+→ Transport
+→ Gateway
+→ Domain（更新状态）
+→ ViewModel
+→ UI
+```
 
-建议使用状态枚举或状态机模式。
+------
 
----
-
-## 7. 异常与错误处理
-
-- Infrastructure 层负责捕获通信异常
-- 转换为统一错误模型
-- 由 Application 层决定如何处理
-- UI 只展示结果
-
-禁止在 UI 层捕获底层异常。
-
----
-
-## 8. 日志策略
-
-- 通信日志
-- 状态变更日志
-- 错误日志
-
-日志必须可定位到：
-
-- 设备
-- 操作
-- 时间点
-
----
-
-## 9. 架构约束规则
-
-1. 不允许跨层直接访问
-2. 不允许寄存器污染领域层
-3. 不允许 UI 包含业务规则
-4. 不允许 Infrastructure 控制业务流程
-5. 所有重大架构决策必须记录到 decision_log.md
-
----
-
-## 10. 当前架构风险点
-
-（此处持续更新）
-
----
-
-## 11. 演进策略
-
-未来扩展方向：
-
-- 多 PLC 支持
-- 多协议支持
-- 插件式设备模型
-- 可配置流程控制

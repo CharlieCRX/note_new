@@ -10,6 +10,6 @@ Window {
     MotorDashboard {
         anchors.centerIn: parent
         // 你甚至可以在这里覆盖初始值
-        currentPos: 300
+//        currentPos: 300
     }
 }
