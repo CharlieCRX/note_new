@@ -6,7 +6,7 @@
 
 ![image-20260330174108898](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20260330174108898.png)
 
-官方要求的安卓开发环境为：
+[官方](https://doc.qt.io/qt-6/android.html)要求的安卓开发环境为：
 
 ![image-20260330174509066](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20260330174509066.png)
 
@@ -30,7 +30,7 @@
 - JDK 21
 - NDK r27c
 
-均可以使用`AndroidStudio`配置完毕，所以使用此工具。
+均可以使用[`AndroidStudio`](https://developer.android.com/studio?hl=zh-cn)配置完毕，所以使用此工具。
 
 安装完毕后，打开：
 
@@ -58,7 +58,9 @@ File | Settings | Languages & Frameworks | Android SDK
 
 ## JKD21
 
-这里偷了个懒，直接使用 `AndroidStudio`自带的 JDK 21 即可：
+这里偷了个懒，直接使用 `AndroidStudio`自带的 JDK 21 即可。
+
+搜索：
 
 ```bash
 File | Settings | Build, Execution, Deployment | Build Tools | Gradle
@@ -82,3 +84,5 @@ File | Settings | Build, Execution, Deployment | Build Tools | Gradle
 填入即可。![image-20260330175958091](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20260330175958091.png)
 
 OpenSSL 随意。
+
+这样就配置好了。
