@@ -24,7 +24,7 @@
 
 ![image-20260511144039216](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20260511144039216.png)
 
-```
+```plc
 // 轴X 绝对 与 相对 定位 接口 必须在X1 X2联动的情况下才能执行
 轴X暂停沿触发(CLK := 轴X软件限位状态,Q => 轴X暂停触发结果);
 IF  轴X软件限位状态 THEN 
