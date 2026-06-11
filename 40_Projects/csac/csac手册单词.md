@@ -157,6 +157,84 @@
 
   ```
   测量、校准
+  
+  The internal frequency calibration of the CSAC is set prior to shipment.
+  ```
+  
+- breach
+
+  ```
+  突破、违背
+  
+  An alarm will trigger when this voltage is breached.
+  ```
+
+- nominal
+
+  ```
+  标称的
+  额定的
+  正常的
+  
+  CSAC nominal output frequency = 10MHz	
+  ```
+
+- frequency aging offsets
+
+  ```
+  因频率老化而导致的偏移量
+  
+  
+  remove cumulative frequency aging offsets
+  
+  例句：
+  - temperature aging effect → 温度老化效应
+  - voltage drift compensation → 电压漂移补偿
+  - time stamp generator → 时间戳生成器
+  ```
+
+- tempt
+
+  ```
+  诱惑, 引诱, 引起...的兴趣
+  
+  tempting 带有一种“虽然不一定是好做法，但诱惑很大”的意味，暗示这种做法可能有风险或并非必要，但直觉上容易让人这样做。
+  
+  It may be tempting, particularly in disciplining applications, to frequently latch the steering value into calibration in the event of unforeseen power outage.
+  ```
+
+- `in the event of`
+
+  ```
+  如果...发生；万一
+  
+  It may be tempting, particularly in disciplining applications, to frequently latch the steering value into calibration in the event of unforeseen power outage.
+  ```
+
+- synchronous
+
+  ```
+  同时的, 同步的
+  
+  The 1PPS output is synchronous with one rising edge of the RF output (pin 12).
+  ```
+
+- holdover
+
+  ```
+  美 /'hoʊldoʊvər/
+  延期, 剩余物, 残留影响
+  
+  In the event that the 1PPS reference is removed from pin 9 while Disciplining, the 
+  CSAC remains in holdover and preserves the most recent steering value
+  ```
+
+- outage
+
+  ```
+  断供, 储运损耗
+  
+  a power outage = 停电期
   ```
 
   
