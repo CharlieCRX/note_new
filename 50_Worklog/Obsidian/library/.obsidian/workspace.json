@@ -4,44 +4,44 @@
     "type": "split",
     "children": [
       {
-        "id": "822dbf2aa414c251",
+        "id": "281b5ddb8493f699",
         "type": "tabs",
-        "dimension": 65.7994923857868,
+        "dimension": 70.40417209908736,
         "children": [
           {
-            "id": "7e1229e27fb4b5a1",
+            "id": "8f3f99329c9b0647",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SSD2351/USBL/USBL 任务汇总6.25.md",
+                "file": "SSD2351/USBL/I2S0 配置/基于 acm8816Launch 的 I2S0 TX 功能验证方法.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "USBL 任务汇总6.25"
+              "title": "基于 acm8816Launch 的 I2S0 TX 功能验证方法"
             }
           }
         ]
       },
       {
-        "id": "2522771f3b41142f",
+        "id": "22370e8504c9c166",
         "type": "tabs",
-        "dimension": 34.2005076142132,
+        "dimension": 29.595827900912646,
         "children": [
           {
-            "id": "b9b3140db80a1d2d",
+            "id": "4d99502c83257085",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "SSD2351/USBL/USBL 任务汇总6.25.md",
+                "file": "SSD2351/USBL/I2S0 配置/基于 acm8816Launch 的 I2S0 TX 功能验证方法.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "USBL 任务汇总6.25 的大纲"
+              "title": "基于 acm8816Launch 的 I2S0 TX 功能验证方法 的大纲"
             }
           }
         ]
@@ -101,7 +101,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 341.5
   },
   "right": {
     "id": "10f5a50c128e118f",
@@ -117,7 +117,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SSD2351/USBL/USBL 任务汇总6.25.md",
+                "file": "SSD2351/USBL/I2S0 配置/基于 acm8816Launch 的 I2S0 TX 功能验证方法.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +127,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "USBL 任务汇总6.25 的反向链接列表"
+              "title": "基于 acm8816Launch 的 I2S0 TX 功能验证方法 的反向链接列表"
             }
           },
           {
@@ -206,13 +206,23 @@
       "bases:新建数据库": false
     }
   },
-  "active": "7e1229e27fb4b5a1",
+  "active": "8f3f99329c9b0647",
   "lastOpenFiles": [
+    "SSD2351/USBL/I2S0 配置/SSD2351 I2S0 6-Wire 支持性分析（第一阶段）.md",
+    "SSD2351/USBL/I2S0 配置/基于 acm8816Launch 的 I2S0 TX 功能验证方法.md",
+    "SSD2351/USBL/I2S0 配置/I2S0 6-Wire PadMux 与 Device Tree 配置分析.md",
+    "SSD2351/USBL/I2S0 配置/USBL管脚定义与DTS冲突.md",
+    "SSD2351/USBL/I2S0 配置/USBL 管脚定义与 PadMux 中 PAD 名称差异分析.md",
+    "SSD2351/USBL/I2S0 配置/逻辑管脚（Logical Pad）对应的功能.md",
+    "SSD2351/USBL/I2S0 配置/I2S 的四线、六线.md",
     "SSD2351/USBL/acm8816Launch 发生了什么.md",
+    "SSD2351/USBL/I2S0 配置/DTS配置.md",
     "SSD2351/USBL/CPU DAI vs Codec DAI.md",
-    "SSD2351/USBL/ALSA-高级Linux声音架构.md",
     "SSD2351/USBL/ASoC (ALSA System on Chip).md",
+    "SSD2351/USBL/ALSA-高级Linux声音架构.md",
+    "SSD2351/USBL/I2S0 配置/配置 I2S0 使用的 PCB引脚.md",
     "SSD2351/USBL/USBL 任务汇总6.25.md",
+    "SSD2351/USBL/I2S0 配置",
     "未命名.base",
     "SSD2351/编译/TFTP烧录内核.md",
     "SSD2351/编译",
