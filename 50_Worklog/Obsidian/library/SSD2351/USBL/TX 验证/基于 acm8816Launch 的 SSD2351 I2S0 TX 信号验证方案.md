@@ -71,12 +71,12 @@ SSD2351 I2S0 TX Pin
 
 根据前期分析：
 
-|I2S 信号|PAD|
-|---|---|
-|TX_BCLK|PAD_GPIOD_04|
-|TX_WCK|PAD_GPIOD_05|
-|TX_SDO|PAD_GPIOD_03|
-|MCLK|PAD_OUTN_CH1|
+| I2S 信号  | PAD          |
+| ------- | ------------ |
+| TX_BCLK | PAD_GPIOD_04 |
+| TX_WCK  | PAD_GPIOD_05 |
+| TX_SDO  | PAD_GPIOD_03 |
+| MCLK    | PAD_OUTN_CH1 |
 
 建议：
 

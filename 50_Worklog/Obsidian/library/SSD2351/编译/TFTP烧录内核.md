@@ -11,7 +11,7 @@ project/image/output/images
 #插入TYPEC线，开机按住Enter不放进入到Uboot控制台，按照以下方式设置IP
 setenv ipaddr 192.168.1.150; //设置板端ip，要求能跟PC端ping通
 
-setenv serverip 192.168.1.112； //设置PC端的ip
+setenv serverip 192.168.1.100； //设置PC端的ip
 
 setenv -f ethact sstar_emac; //设置使用Emac,本平台使用的是Emac
 

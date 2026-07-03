@@ -29,13 +29,6 @@ i2s-tx0-tdm-wiremode = <2>; // 1:4wire        2:6 wire
 i2s-rx0-tdm-wiremode = <2>; // 1:4wire        2:6 wire
 ```
 
-其中：
-
-```
-1 = 4-wire
-2 = 6-wire
-```
-
 因此可以确认：
 
 > I2S0 已经配置为 6-wire 模式。
