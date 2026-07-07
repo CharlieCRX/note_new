@@ -25,7 +25,7 @@ estart //初始化网络 uboot 下使用网络之前需要先输入该命令
 
 phy_w 0 0x2100
 
-phy_w 0 0x140
+phy_w 0 0x140  
 
 
 estar
