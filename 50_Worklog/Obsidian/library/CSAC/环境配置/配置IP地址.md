@@ -48,6 +48,7 @@ iface eth0 inet static
 ```bash
 ip addr flush dev eth0
 ip addr add 10.1.2.151/8 dev eth0
+ip link set eth0 up
 ```
 
 后重启，IP地址就设置为了单 IP 10.1.2.151 了。
