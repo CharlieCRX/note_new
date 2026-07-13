@@ -4,44 +4,9 @@
     "type": "split",
     "children": [
       {
-        "id": "24739fdf440479de",
-        "type": "tabs",
-        "dimension": 67.95212765957447,
-        "children": [
-          {
-            "id": "de71d09697c24ed5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "SSD2351/USBL/RX 验证/I2S0 6-Wire RX 功能验证方案.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "I2S0 6-Wire RX 功能验证方案"
-            }
-          },
-          {
-            "id": "ffba01ba83022bcb",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "SSD2351/USBL/RX 验证/AK5538 独立测试 — 方案 A：fpga 工具 + i2c-tools 脚本（USBL 平台）.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "AK5538 独立测试 — 方案 A：fpga 工具 + i2c-tools 脚本（USBL 平台）"
-            }
-          }
-        ]
-      },
-      {
         "id": "a8d376d225c9b845",
         "type": "tabs",
-        "dimension": 32.047872340425535,
+        "dimension": 73.74909354604786,
         "children": [
           {
             "id": "4a25cb2356ab6617",
@@ -49,13 +14,64 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SSD2351/USBL/RX 验证/I2S0 6-Wire RX 功能验证方案.md",
+                "file": "RISCV/Chapter 1. Introduction.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "I2S0 6-Wire RX 功能验证方案 的大纲"
+              "title": "Chapter 1. Introduction 的大纲"
+            }
+          },
+          {
+            "id": "4fe671bcdbe3fb8b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "SSD2351/USBL/TX 验证/基于 acm8816Launch 的 SSD2351 I2S0 TX 信号验证方案.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "基于 acm8816Launch 的 SSD2351 I2S0 TX 信号验证方案"
+            }
+          },
+          {
+            "id": "de9df165b8bd1d6b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "RISCV/Chapter 1. Introduction.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Chapter 1. Introduction"
+            }
+          }
+        ],
+        "currentTab": 2
+      },
+      {
+        "id": "b56e10a18d4a9069",
+        "type": "tabs",
+        "dimension": 26.25090645395214,
+        "children": [
+          {
+            "id": "f00176f0c17cfa6c",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "RISCV/Chapter 1. Introduction.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Chapter 1. Introduction 的大纲"
             }
           }
         ]
@@ -115,7 +131,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 372.5
+    "width": 496.5
   },
   "right": {
     "id": "10f5a50c128e118f",
@@ -131,7 +147,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SSD2351/USBL/RX 验证/I2S0 6-Wire RX 功能验证方案.md",
+                "file": "SSD2351/USBL/RX 验证/AK5538 的工作机制.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -141,7 +157,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "I2S0 6-Wire RX 功能验证方案 的反向链接列表"
+              "title": "AK5538 的工作机制 的反向链接列表"
             }
           },
           {
@@ -220,15 +236,29 @@
       "bases:新建数据库": false
     }
   },
-  "active": "de71d09697c24ed5",
+  "active": "83048c1a22174ae8",
   "lastOpenFiles": [
-    "SSD2351/USBL/RX 验证/AK5538 独立测试 — 方案 A：fpga 工具 + i2c-tools 脚本（USBL 平台）.md",
-    "SSD2351/USBL/RX 验证/USBL 平台 AK5538 + SSD2351 I2S RX 调试排查指南.md",
-    "SSD2351/USBL/I2S0 配置/DTS配置.md",
-    "SSD2351/USBL/RX 验证/AK5538 的工作机制.md",
-    "SSD2351/USBL/RX 验证/I2S0 6-Wire RX 功能验证方案.md",
-    "SSD2351/USBL/TX 验证/基于 acm8816Launch 的 SSD2351 I2S0 TX 信号验证方案.md",
+    "RISCV/单词语法/Chapter_1.md",
+    "SSD2351/USBL/ALSA-高级Linux声音架构.md",
     "SSD2351/USBL/TX 验证/acm8816Launch 发生了什么.md",
+    "SSD2351/USBL/TX 验证/基于 acm8816Launch 的 SSD2351 I2S0 TX 信号验证方案.md",
+    "SSD2351/USBL/RX 验证/USBL 平台 AK5538 + SSD2351 I2S RX 调试排查指南.md",
+    "SSD2351/USBL/RX 验证/I2S0 6-Wire RX 功能验证方案.md",
+    "RISCV/Chapter 1. Introduction.md",
+    "RISCV/单词语法",
+    "RISCV",
+    "SSD2351/USBL/RX 验证/USBL 平台 I2S0 RX 调试总结（arecord 调试阶段）.md",
+    "SSD2351/USBL/SSD2351 I2S0 6-Wire 功能验证方案.md",
+    "SSD2351/USBL/USBL 任务汇总6.25.md",
+    "SSD2351/USBL/CPU DAI vs Codec DAI.md",
+    "SSD2351/USBL/ASoC (ALSA System on Chip).md",
+    "PLC/servoV6/双组电机策略.md",
+    "SSD2351/USBL/RX 验证/AK5538 独立测试 — 方案 A：fpga 工具 + i2c-tools 脚本（USBL 平台）.md",
+    "SSD2351/USBL/RX 验证/AK5538 的工作机制.md",
+    "PLC/servoV6",
+    "PLC/servoV6.md",
+    "SSD2351/USBL/RX 验证/未命名",
+    "SSD2351/USBL/I2S0 配置/DTS配置.md",
     "CSAC/环境配置/配置IP地址.md",
     "PLC/章节学习/第5章：编程基础.md",
     "CSAC/环境配置/SSH公钥认证失败问题分析报告.md",
@@ -239,25 +269,10 @@
     "CSAC/手册知识/csac手册单词.md",
     "CSAC/手册知识/第一章：简介.md",
     "CSAC/手册知识/第二章(1)：功能描述.md",
-    "CSAC/手册知识/第二章(2)：驯服相关内容.md",
-    "CSAC/需求实现/等待训练结束脚本.md",
-    "CSAC/需求实现/铷钟开发板 4 号驯服相位漂移问题分析与定位报告.md",
-    "CSAC/需求实现/需求分析.md",
-    "CSAC/README.md",
-    "SSD2351/USBL/USBL 任务汇总6.25.md",
-    "SSD2351/编译/TFTP烧录内核.md",
-    "CSAC/环境配置/SSH 公钥认证失败问题分析报告.md",
-    "第一章：简介 一、两个核心同步功能.md",
     "CSAC/需求实现",
     "CSAC/手册知识",
     "CSAC/环境配置",
     "CSAC",
-    "SSD2351/USBL/SSD2351 I2S0 6-Wire 功能验证方案.md",
-    "SSD2351/USBL/I2S0 配置/I2S 的四线、六线.md",
-    "SSD2351/USBL/RX 验证",
-    "SSD2351/USBL/TX 验证",
-    "SSD2351/USBL/I2S0 配置",
-    "未命名.base",
     "Pasted image 20260625103521.png"
   ]
 }
