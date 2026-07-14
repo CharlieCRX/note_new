@@ -173,7 +173,7 @@ ALSA Core 可以理解成整个 Linux 音频系统的调度中心。
 - 16bit 是否支持？
 - 当前 PCM Device 是否已经打开？
 
-具体 ALSA 的作用，可以参考：[[ALSA-高级Linux声音架构]]
+具体 ALSA 的作用，可以参考：[[基础1-ALSA-高级Linux声音架构]]
 
 确认都没有问题以后，它才会调用下面几个 Driver。
 
@@ -335,7 +335,7 @@ CPU 的工作只是：
 
 因此，真正控制 I2S TX 引脚的是 `sstar_bach.c`。
 
-DAI 具体逻辑可以参考：[[CPU DAI vs Codec DAI]]
+DAI 具体逻辑可以参考：[[基础3-CPU DAI vs Codec DAI]]
 
 ------
 

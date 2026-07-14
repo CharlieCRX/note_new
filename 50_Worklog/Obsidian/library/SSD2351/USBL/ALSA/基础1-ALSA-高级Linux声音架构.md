@@ -31,7 +31,7 @@
 -   ASoC 框架把音频系统硬性拆分为 **Platform（CPU端）** + **Codec（芯片端）** + **Machine（连接两者的板级匹配）**。
 -   **它起的作用**：ALSA 作为总调度，拿着 `acm8816.c` 这个手册，去跟 CPU 端的 I2S 驱动说：“你们俩对接时，I2S 要用标准格式，BCLK 频率设为 2.8224MHz（对应 44.1k*64 帧时钟）。”——**它负责做“媒人”并协调时钟同步**。
 
-具体关于 ASoC 的描述，可以查看：[[ASoC (ALSA System on Chip)]]
+具体关于 ASoC 的描述，可以查看：[[基础2-ASoC (ALSA System on Chip)]]
 
 ---
 

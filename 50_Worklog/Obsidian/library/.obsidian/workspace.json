@@ -4,74 +4,87 @@
     "type": "split",
     "children": [
       {
-        "id": "a8d376d225c9b845",
+        "id": "b56e10a18d4a9069",
         "type": "tabs",
-        "dimension": 73.74909354604786,
+        "dimension": 74.71014492753623,
         "children": [
           {
-            "id": "4a25cb2356ab6617",
-            "type": "leaf",
-            "state": {
-              "type": "outline",
-              "state": {
-                "file": "RISCV/Chapter 1. Introduction.md",
-                "followCursor": false,
-                "showSearch": false,
-                "searchQuery": ""
-              },
-              "icon": "lucide-list",
-              "title": "Chapter 1. Introduction 的大纲"
-            }
-          },
-          {
-            "id": "4fe671bcdbe3fb8b",
+            "id": "5dd641ab783a212b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SSD2351/USBL/TX 验证/基于 acm8816Launch 的 SSD2351 I2S0 TX 信号验证方案.md",
+                "file": "SSD2351/USBL/RX 验证/AK5538 独立测试 — 方案 A：fpga 工具 + i2c-tools 脚本（USBL 平台）.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "基于 acm8816Launch 的 SSD2351 I2S0 TX 信号验证方案"
+              "title": "AK5538 独立测试 — 方案 A：fpga 工具 + i2c-tools 脚本（USBL 平台）"
             }
           },
           {
-            "id": "de9df165b8bd1d6b",
+            "id": "8ba90673b031f034",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "RISCV/Chapter 1. Introduction.md",
+                "file": "SSD2351/USBL/TX 验证/acm8816Launch 发生了什么.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Chapter 1. Introduction"
+              "title": "acm8816Launch 发生了什么"
+            }
+          },
+          {
+            "id": "adbc9c70ffb69dac",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "SSD2351/编译/编译kernel.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "编译kernel"
+            }
+          },
+          {
+            "id": "52ada1063401a4bd",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "SSD2351/编译/TFTP烧录内核.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "TFTP烧录内核"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       },
       {
-        "id": "b56e10a18d4a9069",
+        "id": "89e862148d26981c",
         "type": "tabs",
-        "dimension": 26.25090645395214,
+        "dimension": 25.28985507246377,
         "children": [
           {
-            "id": "f00176f0c17cfa6c",
+            "id": "2547530d2b4e31ed",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "RISCV/Chapter 1. Introduction.md",
+                "file": "SSD2351/USBL/TX 验证/acm8816Launch 发生了什么.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Chapter 1. Introduction 的大纲"
+              "title": "acm8816Launch 发生了什么 的大纲"
             }
           }
         ]
@@ -147,7 +160,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SSD2351/USBL/RX 验证/AK5538 的工作机制.md",
+                "file": "SSD2351/USBL/TX 验证/acm8816Launch 发生了什么.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -157,7 +170,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "AK5538 的工作机制 的反向链接列表"
+              "title": "acm8816Launch 发生了什么 的反向链接列表"
             }
           },
           {
@@ -166,7 +179,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SSD2351/USBL/acm8816Launch 发生了什么.md",
+                "file": "SSD2351/USBL/TX 验证/acm8816Launch 发生了什么.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -218,7 +231,8 @@
               "title": "acm8816Launch 发生了什么 的大纲"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -236,43 +250,44 @@
       "bases:新建数据库": false
     }
   },
-  "active": "83048c1a22174ae8",
+  "active": "8ba90673b031f034",
   "lastOpenFiles": [
-    "RISCV/单词语法/Chapter_1.md",
-    "SSD2351/USBL/ALSA-高级Linux声音架构.md",
-    "SSD2351/USBL/TX 验证/acm8816Launch 发生了什么.md",
+    "SSD2351/USBL/TX 验证/USBL 平台 AK5538 录音功能集成实践方案.md",
+    "SSD2351/USBL/TX 验证/acm8816Launch 到芯片输出信号的流程.md",
     "SSD2351/USBL/TX 验证/基于 acm8816Launch 的 SSD2351 I2S0 TX 信号验证方案.md",
+    "SSD2351/编译/TFTP烧录内核.md",
+    "SSD2351/编译/编译kernel.md",
+    "SSD2351/USBL/RX 验证/AK5538 独立测试 — 方案 A：fpga 工具 + i2c-tools 脚本（USBL 平台）.md",
+    "SSD2351/USBL/SSD2351 I2S0 6-Wire 功能验证方案.md",
+    "SSD2351/USBL/TX 验证/acm8816Launch 发生了什么.md",
+    "SSD2351/USBL/I2S0 配置/I2S0 6-Wire PadMux 与 Device Tree 配置分析.md",
     "SSD2351/USBL/RX 验证/USBL 平台 AK5538 + SSD2351 I2S RX 调试排查指南.md",
+    "SSD2351/USBL/RX 验证/USBL 平台 I2S0 RX 调试总结（arecord 调试阶段）.md",
     "SSD2351/USBL/RX 验证/I2S0 6-Wire RX 功能验证方案.md",
-    "RISCV/Chapter 1. Introduction.md",
+    "SSD2351/USBL/RX 验证/AK5538 的工作机制.md",
+    "SSD2351/USBL/I2S0 配置/驱动程序读取并转换 DTS 配置(acm8816).md",
+    "SSD2351/USBL/ALSA/实践一(1)：Codec DAI 如何影响 ALSA 设备.md",
+    "SSD2351/USBL/ALSA/实践二(2)：Codec 驱动做了什么？.md",
+    "SSD2351/USBL/ALSA/代码分析1：Machine 驱动的 probe.md",
+    "SSD2351/USBL/ALSA/基于 SSD2351 + ACM8816 理解 Linux ALSA 架构.md",
+    "SSD2351/USBL/ALSA/基础3-CPU DAI vs Codec DAI.md",
+    "SSD2351/USBL/I2S0 配置/DTS配置.md",
+    "SSD2351/USBL/I2S0 配置/配置 I2S0 使用的 PCB引脚.md",
+    "SSD2351/USBL/I2S0 配置/逻辑管脚（Logical Pad）对应的功能.md",
+    "SSD2351/USBL/I2S0 配置/基于 acm8816Launch 的 I2S0 TX 功能验证方法.md",
+    "SSD2351/USBL/I2S0 配置/SSD2351 I2S0 6-Wire 支持性分析（第一阶段）.md",
+    "SSD2351/USBL/I2S0 配置/USBL管脚定义与DTS冲突.md",
+    "SSD2351/USBL/I2S0 配置/USBL 管脚定义与 PadMux 中 PAD 名称差异分析.md",
+    "SSD2351/附录/sstar_asoc_card.c",
+    "SSD2351/附录/soc-pcm.c",
+    "SSD2351/附录/soc-core.c",
+    "SSD2351/附录/acm8816.c",
+    "SSD2351/附录",
+    "SSD2351/USBL/ALSA",
     "RISCV/单词语法",
     "RISCV",
-    "SSD2351/USBL/RX 验证/USBL 平台 I2S0 RX 调试总结（arecord 调试阶段）.md",
-    "SSD2351/USBL/SSD2351 I2S0 6-Wire 功能验证方案.md",
-    "SSD2351/USBL/USBL 任务汇总6.25.md",
-    "SSD2351/USBL/CPU DAI vs Codec DAI.md",
-    "SSD2351/USBL/ASoC (ALSA System on Chip).md",
-    "PLC/servoV6/双组电机策略.md",
-    "SSD2351/USBL/RX 验证/AK5538 独立测试 — 方案 A：fpga 工具 + i2c-tools 脚本（USBL 平台）.md",
-    "SSD2351/USBL/RX 验证/AK5538 的工作机制.md",
     "PLC/servoV6",
-    "PLC/servoV6.md",
     "SSD2351/USBL/RX 验证/未命名",
-    "SSD2351/USBL/I2S0 配置/DTS配置.md",
-    "CSAC/环境配置/配置IP地址.md",
-    "PLC/章节学习/第5章：编程基础.md",
-    "CSAC/环境配置/SSH公钥认证失败问题分析报告.md",
-    "PLC/章节学习",
-    "PLC",
-    "CSAC/环境配置/多开发板自动部署脚本设计说明.md",
-    "CSAC/环境配置/本地HTTP测试接口的方法.md",
-    "CSAC/手册知识/csac手册单词.md",
-    "CSAC/手册知识/第一章：简介.md",
-    "CSAC/手册知识/第二章(1)：功能描述.md",
-    "CSAC/需求实现",
-    "CSAC/手册知识",
-    "CSAC/环境配置",
-    "CSAC",
     "Pasted image 20260625103521.png"
   ]
 }
