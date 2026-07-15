@@ -9,63 +9,20 @@
         "dimension": 74.71014492753623,
         "children": [
           {
-            "id": "5dd641ab783a212b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "SSD2351/USBL/RX 验证/AK5538 独立测试 — 方案 A：fpga 工具 + i2c-tools 脚本（USBL 平台）.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "AK5538 独立测试 — 方案 A：fpga 工具 + i2c-tools 脚本（USBL 平台）"
-            }
-          },
-          {
-            "id": "8ba90673b031f034",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "SSD2351/USBL/TX 验证/acm8816Launch 发生了什么.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "acm8816Launch 发生了什么"
-            }
-          },
-          {
-            "id": "adbc9c70ffb69dac",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "SSD2351/编译/编译kernel.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "编译kernel"
-            }
-          },
-          {
             "id": "52ada1063401a4bd",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SSD2351/编译/TFTP烧录内核.md",
+                "file": "SSD2351/USBL/TX 验证/实验测试/关于“绕过 ACM8816 驱动后录音数据为何来自 AK5538”的原理说明.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "TFTP烧录内核"
+              "title": "关于“绕过 ACM8816 驱动后录音数据为何来自 AK5538”的原理说明"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "89e862148d26981c",
@@ -78,13 +35,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SSD2351/USBL/TX 验证/acm8816Launch 发生了什么.md",
+                "file": "SSD2351/USBL/TX 验证/实验测试/关于“绕过 ACM8816 驱动后录音数据为何来自 AK5538”的原理说明.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "acm8816Launch 发生了什么 的大纲"
+              "title": "关于“绕过 ACM8816 驱动后录音数据为何来自 AK5538”的原理说明 的大纲"
             }
           }
         ]
@@ -160,7 +117,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SSD2351/USBL/TX 验证/acm8816Launch 发生了什么.md",
+                "file": "SSD2351/USBL/TX 验证/实验测试/关于“绕过 ACM8816 驱动后录音数据为何来自 AK5538”的原理说明.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -170,7 +127,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "acm8816Launch 发生了什么 的反向链接列表"
+              "title": "关于“绕过 ACM8816 驱动后录音数据为何来自 AK5538”的原理说明 的反向链接列表"
             }
           },
           {
@@ -179,12 +136,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SSD2351/USBL/TX 验证/acm8816Launch 发生了什么.md",
+                "file": "SSD2351/USBL/TX 验证/实验测试/关于“绕过 ACM8816 驱动后录音数据为何来自 AK5538”的原理说明.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "acm8816Launch 发生了什么 的出链列表"
+              "title": "关于“绕过 ACM8816 驱动后录音数据为何来自 AK5538”的原理说明 的出链列表"
             }
           },
           {
@@ -250,16 +207,24 @@
       "bases:新建数据库": false
     }
   },
-  "active": "8ba90673b031f034",
+  "active": "83048c1a22174ae8",
   "lastOpenFiles": [
+    "SSD2351/USBL/TX 验证/实验测试/USBL 平台 AK5538 录音功能集成实践方案.md",
+    "SSD2351/USBL/TX 验证/实验测试/关于“绕过 ACM8816 驱动后录音数据为何来自 AK5538”的原理说明.md",
+    "PLC/问题描述/PLC 设计问题导致 servoV6 程序复杂化分析.md",
     "SSD2351/USBL/TX 验证/USBL 平台 AK5538 录音功能集成实践方案.md",
+    "SSD2351/USBL/TX 验证/实验测试",
+    "SSD2351/USBL/TX 验证/新建文件夹",
+    "PLC/章节学习/第5章：编程基础.md",
+    "SSD2351/编译/TFTP烧录内核.md",
+    "PLC/问题描述",
+    "PLC/新建文件夹",
+    "SSD2351/编译/编译kernel.md",
+    "SSD2351/USBL/TX 验证/acm8816Launch 发生了什么.md",
     "SSD2351/USBL/TX 验证/acm8816Launch 到芯片输出信号的流程.md",
     "SSD2351/USBL/TX 验证/基于 acm8816Launch 的 SSD2351 I2S0 TX 信号验证方案.md",
-    "SSD2351/编译/TFTP烧录内核.md",
-    "SSD2351/编译/编译kernel.md",
     "SSD2351/USBL/RX 验证/AK5538 独立测试 — 方案 A：fpga 工具 + i2c-tools 脚本（USBL 平台）.md",
     "SSD2351/USBL/SSD2351 I2S0 6-Wire 功能验证方案.md",
-    "SSD2351/USBL/TX 验证/acm8816Launch 发生了什么.md",
     "SSD2351/USBL/I2S0 配置/I2S0 6-Wire PadMux 与 Device Tree 配置分析.md",
     "SSD2351/USBL/RX 验证/USBL 平台 AK5538 + SSD2351 I2S RX 调试排查指南.md",
     "SSD2351/USBL/RX 验证/USBL 平台 I2S0 RX 调试总结（arecord 调试阶段）.md",
@@ -274,20 +239,12 @@
     "SSD2351/USBL/I2S0 配置/DTS配置.md",
     "SSD2351/USBL/I2S0 配置/配置 I2S0 使用的 PCB引脚.md",
     "SSD2351/USBL/I2S0 配置/逻辑管脚（Logical Pad）对应的功能.md",
-    "SSD2351/USBL/I2S0 配置/基于 acm8816Launch 的 I2S0 TX 功能验证方法.md",
-    "SSD2351/USBL/I2S0 配置/SSD2351 I2S0 6-Wire 支持性分析（第一阶段）.md",
-    "SSD2351/USBL/I2S0 配置/USBL管脚定义与DTS冲突.md",
-    "SSD2351/USBL/I2S0 配置/USBL 管脚定义与 PadMux 中 PAD 名称差异分析.md",
     "SSD2351/附录/sstar_asoc_card.c",
     "SSD2351/附录/soc-pcm.c",
     "SSD2351/附录/soc-core.c",
     "SSD2351/附录/acm8816.c",
     "SSD2351/附录",
     "SSD2351/USBL/ALSA",
-    "RISCV/单词语法",
-    "RISCV",
-    "PLC/servoV6",
-    "SSD2351/USBL/RX 验证/未命名",
     "Pasted image 20260625103521.png"
   ]
 }
