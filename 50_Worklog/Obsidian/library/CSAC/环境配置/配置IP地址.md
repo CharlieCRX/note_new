@@ -106,6 +106,7 @@ ifconfig eth0 10.1.2.151 netmask 255.0.0.0
 ```
 ip addr flush dev eth0
 ip addr add 10.1.2.151/8 dev eth0
+ip link set eth0 up
 ```
 
 那么启动流程变成：
@@ -140,5 +141,15 @@ flush
 
 ```
 10.1.2.151
+```
+
+## 配置MAC
+
+如果配置了 IP 地址依旧不通的话，那么有可能是 MAC 地址冲突了。
+
+修改路径为：
+
+```bash
+/etc/init.d/S64mac
 ```
 

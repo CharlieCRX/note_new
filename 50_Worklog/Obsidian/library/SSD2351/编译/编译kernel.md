@@ -1,3 +1,15 @@
+替换的文件目录：
+
+```bash
+/home/crx/ssd2351/source/kernel/sound/soc/sstar/pcupid/
+
+
+
+/home/crx/ssd2351/source/kernel/sound/soc/codecs/
+```
+
+
+
 ```bash
 #全局编译，只要运行，会把boot,kernel，project，sdk编译
 $ cd ~/ssd2351/source/project/
@@ -33,7 +45,7 @@ $ make image-fast-nocheck -j8
 - 编译完成后生成的images在
 
   ```bash
-  project/image/output/images
+  /home/crx/ssd2351/source/project/image/output/
   ```
 
   
