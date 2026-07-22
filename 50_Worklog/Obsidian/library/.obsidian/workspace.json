@@ -28,16 +28,30 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SSD2351/编译/编译kernel.md",
+                "file": "SSD2351/USBL/RX 验证/AK5538 独立测试 — 方案 A：fpga 工具 + i2c-tools 脚本（USBL 平台）.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "编译kernel"
+              "title": "AK5538 独立测试 — 方案 A：fpga 工具 + i2c-tools 脚本（USBL 平台）"
+            }
+          },
+          {
+            "id": "c7e31c297a63e2c3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "SSD2351/USBL/I2S0 配置/驱动程序读取并转换 DTS 配置(acm8816).md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "驱动程序读取并转换 DTS 配置(acm8816)"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       },
       {
         "id": "89e862148d26981c",
@@ -50,13 +64,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SSD2351/编译/编译kernel.md",
+                "file": "SSD2351/USBL/I2S0 配置/驱动程序读取并转换 DTS 配置(acm8816).md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "编译kernel 的大纲"
+              "title": "驱动程序读取并转换 DTS 配置(acm8816) 的大纲"
             }
           }
         ]
@@ -91,7 +105,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "path:\"SSD2351/\" ",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -116,7 +130,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 717.5
+    "width": 459.5
   },
   "right": {
     "id": "10f5a50c128e118f",
@@ -132,7 +146,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SSD2351/编译/编译kernel.md",
+                "file": "SSD2351/编译/修改.config问题.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -142,7 +156,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "编译kernel 的反向链接列表"
+              "title": "修改.config问题 的反向链接列表"
             }
           },
           {
@@ -151,12 +165,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SSD2351/编译/编译kernel.md",
+                "file": "SSD2351/编译/修改.config问题.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "编译kernel 的出链列表"
+              "title": "修改.config问题 的出链列表"
             }
           },
           {
@@ -222,38 +236,38 @@
       "bases:新建数据库": false
     }
   },
-  "active": "974665ae6156e3d5",
+  "active": "83048c1a22174ae8",
   "lastOpenFiles": [
-    "SSD2351/编译/TFTP烧录内核.md",
-    "SSD2351/USBL/TX 验证/实验测试/ACM8816 record 调用 AK5538 配置体系分析与调试指南.md",
+    "SSD2351/USBL/RX 验证/AK5538 的工作机制.md",
+    "SSD2351/USBL/RX 验证/AK5538 独立测试 — 方案 A：fpga 工具 + i2c-tools 脚本（USBL 平台）.md",
+    "SSD2351/USBL/RX 验证/AK5538 驱动保留与用户态 I2C+FPGA 共存方案.md",
+    "SSD2351/USBL/RX 验证/AK5538 内核驱动寄存器与配置映射表.md",
+    "SSD2351/USBL/RX 验证/AK5538 适配修改与验证说明（终）.md",
+    "CSAC/环境配置/配置IP地址.md",
+    "SSD2351/编译/修改.config问题.md",
+    "SSD2351/USBL/ALSA/代码分析1：Machine 驱动的 probe.md",
+    "SSD2351/USBL/ALSA/实践一(1)：Codec DAI 如何影响 ALSA 设备.md",
+    "SSD2351/USBL/RX 验证/USBL 平台 AK5538 + SSD2351 I2S RX 调试排查指南.md",
+    "SSD2351/USBL/TX 验证/基于 acm8816Launch 的 SSD2351 I2S0 TX 信号验证方案.md",
+    "SSD2351/USBL/TX 验证/acm8816Launch 到芯片输出信号的流程.md",
     "SSD2351/USBL/TX 验证/实验测试/ACM8816 驱动修改与 AK5538 arecord 调试历程总结 - 192K错误协商.md",
+    "SSD2351/编译/编译kernel.md",
+    "SSD2351/USBL/TX 验证/实验测试/ACM8816 record 调用 AK5538 配置体系分析与调试指南.md",
+    "SSD2351/USBL/SSD2351 I2S0 6-Wire 功能验证方案.md",
+    "SSD2351/编译/TFTP烧录内核.md",
     "SSD2351/USBL/TX 验证/实验测试/ACM8816 驱动修改与 AK5538 arecord 调试历程总结.md",
     "SSD2351/USBL/TX 验证/实验测试/关于“绕过 ACM8816 驱动后录音数据为何来自 AK5538”的原理说明.md",
-    "SSD2351/编译/编译kernel.md",
-    "SSD2351/USBL/RX 验证/AK5538 内核驱动寄存器与配置映射表.md",
-    "SSD2351/USBL/RX 验证/USBL 平台 AK5538 + SSD2351 I2S RX 调试排查指南.md",
-    "SSD2351/USBL/RX 验证/AK5538 独立测试 — 方案 A：fpga 工具 + i2c-tools 脚本（USBL 平台）.md",
     "SSD2351/USBL/TX 验证/实验测试/USBL 平台 AK5538 录音功能集成实践方案.md",
     "SSD2351/USBL/TX 验证/实验测试/USBL 平台 AK5538 录音功能调试实验记录 - 192K的错误协商.md",
     "SSD2351/USBL/RX 验证/USBL 平台 I2S0 RX 调试总结（arecord 调试阶段）.md",
     "SSD2351/USBL/ACM8816 驱动修改与 AK5538 arecord 调试历程总结.md",
     "SSD2351/USBL/TX 验证/实验测试/USBL 平台 AK5538 录音功能调试（1） — 问题定位与下一步 Debug 步骤.md",
     "SSD2351/USBL/TX 验证/实验测试/sstar_pcm.c DMA 缓冲区分配问题分析.md",
-    "SSD2351/USBL/TX 验证/基于 acm8816Launch 的 SSD2351 I2S0 TX 信号验证方案.md",
     "SSD2351/USBL/TX 验证/acm8816Launch 发生了什么.md",
-    "SSD2351/USBL/TX 验证/acm8816Launch 到芯片输出信号的流程.md",
-    "CSAC/环境配置/配置IP地址.md",
-    "CSAC/环境配置/多开发板自动部署脚本设计说明.md",
-    "CSAC/环境配置/本地HTTP测试接口的方法.md",
-    "PLC/问题描述/PLC 设计问题导致 servoV6 程序复杂化分析.md",
-    "SSD2351/USBL/TX 验证/USBL 平台 AK5538 录音功能集成实践方案.md",
     "SSD2351/USBL/TX 验证/实验测试",
     "SSD2351/USBL/TX 验证/新建文件夹",
-    "PLC/章节学习/第5章：编程基础.md",
     "PLC/问题描述",
     "PLC/新建文件夹",
-    "SSD2351/USBL/SSD2351 I2S0 6-Wire 功能验证方案.md",
-    "SSD2351/USBL/I2S0 配置/I2S0 6-Wire PadMux 与 Device Tree 配置分析.md",
     "SSD2351/附录/sstar_asoc_card.c",
     "SSD2351/附录/soc-pcm.c",
     "SSD2351/附录/soc-core.c",

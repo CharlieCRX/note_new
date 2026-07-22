@@ -39,7 +39,7 @@ $ make image-fast-nocheck -j8
 - 后续直接使用
 
   ```bash
-  make image -j8
+  make image-fast-nocheck -j8
   ```
 
 - 编译完成后生成的images在
