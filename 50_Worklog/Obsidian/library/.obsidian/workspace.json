@@ -42,12 +42,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SSD2351/USBL/I2S0 配置/驱动程序读取并转换 DTS 配置(acm8816).md",
+                "file": "CSAC/环境配置/配置IP地址.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "驱动程序读取并转换 DTS 配置(acm8816)"
+              "title": "配置IP地址"
             }
           }
         ],
@@ -64,13 +64,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SSD2351/USBL/I2S0 配置/驱动程序读取并转换 DTS 配置(acm8816).md",
+                "file": "CSAC/环境配置/配置IP地址.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "驱动程序读取并转换 DTS 配置(acm8816) 的大纲"
+              "title": "配置IP地址 的大纲"
             }
           }
         ]
@@ -105,7 +105,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "path:\"SSD2351/\" ",
+                "query": "path:\"CSAC/\" ",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -238,12 +238,13 @@
   },
   "active": "83048c1a22174ae8",
   "lastOpenFiles": [
-    "SSD2351/USBL/RX 验证/AK5538 的工作机制.md",
     "SSD2351/USBL/RX 验证/AK5538 独立测试 — 方案 A：fpga 工具 + i2c-tools 脚本（USBL 平台）.md",
+    "CSAC/环境配置/配置IP地址.md",
+    "SSD2351/USBL/I2S0 配置/驱动程序读取并转换 DTS 配置(acm8816).md",
+    "SSD2351/USBL/RX 验证/AK5538 的工作机制.md",
     "SSD2351/USBL/RX 验证/AK5538 驱动保留与用户态 I2C+FPGA 共存方案.md",
     "SSD2351/USBL/RX 验证/AK5538 内核驱动寄存器与配置映射表.md",
     "SSD2351/USBL/RX 验证/AK5538 适配修改与验证说明（终）.md",
-    "CSAC/环境配置/配置IP地址.md",
     "SSD2351/编译/修改.config问题.md",
     "SSD2351/USBL/ALSA/代码分析1：Machine 驱动的 probe.md",
     "SSD2351/USBL/ALSA/实践一(1)：Codec DAI 如何影响 ALSA 设备.md",
@@ -263,7 +264,6 @@
     "SSD2351/USBL/ACM8816 驱动修改与 AK5538 arecord 调试历程总结.md",
     "SSD2351/USBL/TX 验证/实验测试/USBL 平台 AK5538 录音功能调试（1） — 问题定位与下一步 Debug 步骤.md",
     "SSD2351/USBL/TX 验证/实验测试/sstar_pcm.c DMA 缓冲区分配问题分析.md",
-    "SSD2351/USBL/TX 验证/acm8816Launch 发生了什么.md",
     "SSD2351/USBL/TX 验证/实验测试",
     "SSD2351/USBL/TX 验证/新建文件夹",
     "PLC/问题描述",
