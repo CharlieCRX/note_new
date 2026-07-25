@@ -4,73 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "b56e10a18d4a9069",
+        "id": "d16eba80e397ec3e",
         "type": "tabs",
-        "dimension": 74.71014492753623,
         "children": [
           {
-            "id": "52ada1063401a4bd",
+            "id": "1b496500fb3008df",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CSAC/环境配置/配置IP地址.md",
+                "file": "SSD2351/编译/TFTP烧录内核.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "配置IP地址"
-            }
-          },
-          {
-            "id": "974665ae6156e3d5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "SSD2351/USBL/RX 验证/AK5538 独立测试 — 方案 A：fpga 工具 + i2c-tools 脚本（USBL 平台）.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "AK5538 独立测试 — 方案 A：fpga 工具 + i2c-tools 脚本（USBL 平台）"
-            }
-          },
-          {
-            "id": "c7e31c297a63e2c3",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "CSAC/环境配置/配置IP地址.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "配置IP地址"
-            }
-          }
-        ],
-        "currentTab": 2
-      },
-      {
-        "id": "89e862148d26981c",
-        "type": "tabs",
-        "dimension": 25.28985507246377,
-        "children": [
-          {
-            "id": "2547530d2b4e31ed",
-            "type": "leaf",
-            "state": {
-              "type": "outline",
-              "state": {
-                "file": "CSAC/环境配置/配置IP地址.md",
-                "followCursor": false,
-                "showSearch": false,
-                "searchQuery": ""
-              },
-              "icon": "lucide-list",
-              "title": "配置IP地址 的大纲"
+              "title": "TFTP烧录内核"
             }
           }
         ]
@@ -238,42 +186,42 @@
   },
   "active": "83048c1a22174ae8",
   "lastOpenFiles": [
-    "SSD2351/USBL/RX 验证/AK5538 独立测试 — 方案 A：fpga 工具 + i2c-tools 脚本（USBL 平台）.md",
-    "CSAC/环境配置/配置IP地址.md",
-    "SSD2351/USBL/I2S0 配置/驱动程序读取并转换 DTS 配置(acm8816).md",
-    "SSD2351/USBL/RX 验证/AK5538 的工作机制.md",
-    "SSD2351/USBL/RX 验证/AK5538 驱动保留与用户态 I2C+FPGA 共存方案.md",
-    "SSD2351/USBL/RX 验证/AK5538 内核驱动寄存器与配置映射表.md",
-    "SSD2351/USBL/RX 验证/AK5538 适配修改与验证说明（终）.md",
-    "SSD2351/编译/修改.config问题.md",
-    "SSD2351/USBL/ALSA/代码分析1：Machine 驱动的 probe.md",
-    "SSD2351/USBL/ALSA/实践一(1)：Codec DAI 如何影响 ALSA 设备.md",
-    "SSD2351/USBL/RX 验证/USBL 平台 AK5538 + SSD2351 I2S RX 调试排查指南.md",
-    "SSD2351/USBL/TX 验证/基于 acm8816Launch 的 SSD2351 I2S0 TX 信号验证方案.md",
-    "SSD2351/USBL/TX 验证/acm8816Launch 到芯片输出信号的流程.md",
-    "SSD2351/USBL/TX 验证/实验测试/ACM8816 驱动修改与 AK5538 arecord 调试历程总结 - 192K错误协商.md",
-    "SSD2351/编译/编译kernel.md",
-    "SSD2351/USBL/TX 验证/实验测试/ACM8816 record 调用 AK5538 配置体系分析与调试指南.md",
-    "SSD2351/USBL/SSD2351 I2S0 6-Wire 功能验证方案.md",
-    "SSD2351/编译/TFTP烧录内核.md",
-    "SSD2351/USBL/TX 验证/实验测试/ACM8816 驱动修改与 AK5538 arecord 调试历程总结.md",
-    "SSD2351/USBL/TX 验证/实验测试/关于“绕过 ACM8816 驱动后录音数据为何来自 AK5538”的原理说明.md",
-    "SSD2351/USBL/TX 验证/实验测试/USBL 平台 AK5538 录音功能集成实践方案.md",
-    "SSD2351/USBL/TX 验证/实验测试/USBL 平台 AK5538 录音功能调试实验记录 - 192K的错误协商.md",
-    "SSD2351/USBL/RX 验证/USBL 平台 I2S0 RX 调试总结（arecord 调试阶段）.md",
+    "未命名",
+    "SSD2351/USBL/网络转发/需求说明.md",
     "SSD2351/USBL/ACM8816 驱动修改与 AK5538 arecord 调试历程总结.md",
-    "SSD2351/USBL/TX 验证/实验测试/USBL 平台 AK5538 录音功能调试（1） — 问题定位与下一步 Debug 步骤.md",
-    "SSD2351/USBL/TX 验证/实验测试/sstar_pcm.c DMA 缓冲区分配问题分析.md",
+    "SSD2351/USBL/SSD2351 I2S0 6-Wire 功能验证方案.md",
+    "SSD2351/USBL/USBL 任务汇总6.25.md",
+    "SSD2351/USBL/RX 验证/资料/AK5538 用户态独立配置与内核 Dummy Codec 迁移方案.md",
+    "SSD2351/USBL/网络转发",
+    "SSD2351/USBL/RX 验证/USBL 平台 I2S0 RX 调试总结（arecord 调试阶段）.md",
+    "SSD2351/USBL/RX 验证/USBL 平台 AK5538 + SSD2351 I2S RX 调试排查指南.md",
+    "SSD2351/USBL/RX 验证/AK5538 驱动保留与用户态 I2C+FPGA 共存方案.md",
+    "SSD2351/USBL/RX 验证/AK5538 适配修改与验证说明（终）.md",
+    "SSD2351/USBL/RX 验证/AK5538 的工作机制.md",
+    "SSD2351/USBL/RX 验证/AK5538 独立测试 — 方案 A：fpga 工具 + i2c-tools 脚本（USBL 平台）.md",
+    "SSD2351/USBL/RX 验证/AK5538 内核驱动寄存器与配置映射表.md",
+    "SSD2351/USBL/RX 验证/AK5538 RX 验证与排查.md",
+    "SSD2351/USBL/RX 验证/AK5538 RX 现状与实施方案.md",
+    "SSD2351/USBL/RX 验证/AK5538 工作机制与配置参考.md",
+    "SSD2351/USBL/RX 验证/AK5538_Capture_PCM_Issue_Summary_and_Solution.md",
+    "SSD2351/USBL/RX 验证/AK5538 用户态驱动实现指南.md",
+    "SSD2351/USBL/RX 验证/AK5538 用户态独立配置与内核 Dummy Codec 迁移方案.md",
+    "SSD2351/USBL/RX 验证/AK5538_PORTING_NOTES.md",
+    "SSD2351/USBL/RX 验证/AK5538_Driver_Verification_Guide.md",
+    "SSD2351/USBL/RX 验证/AK5538_Codec_Driver_Implementation_Plan.md",
+    "SSD2351/USBL/RX 验证/AK5538_Codec_Current_Status_Report.md",
+    "SSD2351/USBL/RX 验证",
+    "SSD2351/USBL/00-USBL 首页.md",
+    "SSD2351/USBL/20-平台实现/03-RX 录音链路/AK5538 当前适配方案.md",
+    "SSD2351/USBL/TX 验证/实验测试/关于“绕过 ACM8816 驱动后录音数据为何来自 AK5538”的原理说明.md",
     "SSD2351/USBL/TX 验证/实验测试",
+    "SSD2351/USBL/TX 验证",
+    "SSD2351/USBL/ALSA",
     "SSD2351/USBL/TX 验证/新建文件夹",
     "PLC/问题描述",
     "PLC/新建文件夹",
     "SSD2351/附录/sstar_asoc_card.c",
     "SSD2351/附录/soc-pcm.c",
-    "SSD2351/附录/soc-core.c",
-    "SSD2351/附录/acm8816.c",
-    "SSD2351/附录",
-    "SSD2351/USBL/ALSA",
     "Pasted image 20260625103521.png"
   ]
 }
