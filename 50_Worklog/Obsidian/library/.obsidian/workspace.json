@@ -4,21 +4,73 @@
     "type": "split",
     "children": [
       {
-        "id": "d16eba80e397ec3e",
+        "id": "d22ba3f71cb48e0d",
         "type": "tabs",
+        "dimension": 72.95302013422818,
         "children": [
           {
-            "id": "1b496500fb3008df",
+            "id": "afe775e2758f0ddc",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SSD2351/编译/TFTP烧录内核.md",
+                "file": "PLC/servoV6/02_PLC程序的抽象/04_(1)PLC 轴拓扑权威配置.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "TFTP烧录内核"
+              "title": "04_(1)PLC 轴拓扑权威配置"
+            }
+          },
+          {
+            "id": "29c449513168e52d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PLC/servoV6/02_PLC程序的抽象/04_ PLC轴的配置以及联动逻辑.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "04_ PLC轴的配置以及联动逻辑"
+            }
+          },
+          {
+            "id": "b48785b7ced1b5ed",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PLC/servoV6/02_PLC程序的抽象/05_联动建立和解除（上位机视角）.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "05_联动建立和解除（上位机视角）"
+            }
+          }
+        ],
+        "currentTab": 2
+      },
+      {
+        "id": "afbb0f5262f6e014",
+        "type": "tabs",
+        "dimension": 27.046979865771814,
+        "children": [
+          {
+            "id": "7ac81578d1af6686",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "PLC/servoV6/02_PLC程序的抽象/05_联动建立和解除（上位机视角）.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "大纲"
             }
           }
         ]
@@ -41,7 +93,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": true
+                "autoReveal": true,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
               "title": "文件列表"
@@ -78,7 +132,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 459.5
+    "width": 385.5
   },
   "right": {
     "id": "10f5a50c128e118f",
@@ -184,44 +238,44 @@
       "bases:新建数据库": false
     }
   },
-  "active": "83048c1a22174ae8",
+  "active": "b48785b7ced1b5ed",
   "lastOpenFiles": [
+    "PLC/servoV6/02_PLC程序的抽象/05_(1)PLC龙门联动控制逻辑.md",
+    "PLC/servoV6/02_PLC程序的抽象/05_联动建立和解除（上位机视角）.md",
+    "PLC/servoV6/02_PLC程序的抽象/04_(1)PLC 轴拓扑权威配置.md",
+    "PLC/servoV6/02_PLC程序的抽象/04_ PLC轴的配置以及联动逻辑.md",
+    "PLC/servoV6/02_PLC程序的抽象/PLC龙门联动控制逻辑.md",
+    "PLC/servoV6/02_PLC程序的抽象/03_PLC变量协议.md",
+    "PLC/servoV6/02_PLC程序的抽象/02_PLC16槽位动态轴整体重构实施规划.md",
+    "PLC/servoV6/02_PLC程序的抽象/01_PLC当前设计.md",
+    "PLC/servoV6/01_重构清单/TIP备忘录.md",
+    "PLC/servoV6/01_重构清单/04_PLC问题记录.md",
+    "PLC/servoV6/01_重构清单/01_servoV6 与新 PLC 差异.md",
+    "PLC/servoV6/03_开发规划/01_告警码拆分设计与实施规划.md",
+    "PLC/servoV6/03_开发规划/阶段0：协议冻结与测试安全网.md",
+    "PLC/servoV6/03_开发规划/告警码拆分设计与实施规划.md",
+    "CSAC/环境配置/配置IP地址.md",
+    "SSD2351/编译/TFTP烧录内核.md",
+    "SSD2351/编译/修改.config问题.md",
+    "PLC/基础知识/01_PLC变量协议属性.md",
+    "PLC/servoV6/03_开发规划",
+    "PLC/章节学习/第5章：编程基础.md",
+    "PLC/问题描述/PLC 设计问题导致 servoV6 程序复杂化分析.md",
+    "PLC/问题描述/未命名.md",
+    "PLC/基础知识点.md",
+    "PLC/基础知识",
+    "PLC/基础知识点 1.md",
+    "PLC/servoV6/01_重构清单/03_联动轴配置与运行解耦设计说明.md",
+    "PLC/servoV6/02_PLC程序的抽象/PLC16槽位动态轴整体重构实施规划.md",
+    "PLC/servoV6/02_PLC程序的抽象/02_PLC16槽位动态轴领域模型与职责配置协议.md",
+    "PLC/servoV6/02_PLC程序的抽象",
+    "PLC/servoV6/新建文件夹",
+    "PLC/servoV6/02_UI逻辑",
+    "PLC/servoV6/01_重构清单/未命名",
+    "PLC/servoV6/01_重构清单",
+    "SSD2351/USBL/AK5538调试/新建文本文档.txt",
+    "SSD2351/USBL/AK5538调试",
     "未命名",
-    "SSD2351/USBL/网络转发/需求说明.md",
-    "SSD2351/USBL/ACM8816 驱动修改与 AK5538 arecord 调试历程总结.md",
-    "SSD2351/USBL/SSD2351 I2S0 6-Wire 功能验证方案.md",
-    "SSD2351/USBL/USBL 任务汇总6.25.md",
-    "SSD2351/USBL/RX 验证/资料/AK5538 用户态独立配置与内核 Dummy Codec 迁移方案.md",
-    "SSD2351/USBL/网络转发",
-    "SSD2351/USBL/RX 验证/USBL 平台 I2S0 RX 调试总结（arecord 调试阶段）.md",
-    "SSD2351/USBL/RX 验证/USBL 平台 AK5538 + SSD2351 I2S RX 调试排查指南.md",
-    "SSD2351/USBL/RX 验证/AK5538 驱动保留与用户态 I2C+FPGA 共存方案.md",
-    "SSD2351/USBL/RX 验证/AK5538 适配修改与验证说明（终）.md",
-    "SSD2351/USBL/RX 验证/AK5538 的工作机制.md",
-    "SSD2351/USBL/RX 验证/AK5538 独立测试 — 方案 A：fpga 工具 + i2c-tools 脚本（USBL 平台）.md",
-    "SSD2351/USBL/RX 验证/AK5538 内核驱动寄存器与配置映射表.md",
-    "SSD2351/USBL/RX 验证/AK5538 RX 验证与排查.md",
-    "SSD2351/USBL/RX 验证/AK5538 RX 现状与实施方案.md",
-    "SSD2351/USBL/RX 验证/AK5538 工作机制与配置参考.md",
-    "SSD2351/USBL/RX 验证/AK5538_Capture_PCM_Issue_Summary_and_Solution.md",
-    "SSD2351/USBL/RX 验证/AK5538 用户态驱动实现指南.md",
-    "SSD2351/USBL/RX 验证/AK5538 用户态独立配置与内核 Dummy Codec 迁移方案.md",
-    "SSD2351/USBL/RX 验证/AK5538_PORTING_NOTES.md",
-    "SSD2351/USBL/RX 验证/AK5538_Driver_Verification_Guide.md",
-    "SSD2351/USBL/RX 验证/AK5538_Codec_Driver_Implementation_Plan.md",
-    "SSD2351/USBL/RX 验证/AK5538_Codec_Current_Status_Report.md",
-    "SSD2351/USBL/RX 验证",
-    "SSD2351/USBL/00-USBL 首页.md",
-    "SSD2351/USBL/20-平台实现/03-RX 录音链路/AK5538 当前适配方案.md",
-    "SSD2351/USBL/TX 验证/实验测试/关于“绕过 ACM8816 驱动后录音数据为何来自 AK5538”的原理说明.md",
-    "SSD2351/USBL/TX 验证/实验测试",
-    "SSD2351/USBL/TX 验证",
-    "SSD2351/USBL/ALSA",
-    "SSD2351/USBL/TX 验证/新建文件夹",
-    "PLC/问题描述",
-    "PLC/新建文件夹",
-    "SSD2351/附录/sstar_asoc_card.c",
-    "SSD2351/附录/soc-pcm.c",
     "Pasted image 20260625103521.png"
   ]
 }
