@@ -42,12 +42,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PLC/servoV6/02_PLC程序的抽象/05_联动建立和解除（上位机视角）.md",
+                "file": "PLC/servoV6/02_PLC程序的抽象/05_(1)PLC龙门联动控制逻辑.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "05_联动建立和解除（上位机视角）"
+              "title": "05_(1)PLC龙门联动控制逻辑"
             }
           }
         ],
@@ -64,7 +64,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "PLC/servoV6/02_PLC程序的抽象/05_联动建立和解除（上位机视角）.md",
+                "file": "PLC/servoV6/02_PLC程序的抽象/05_(1)PLC龙门联动控制逻辑.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -240,19 +240,22 @@
   },
   "active": "b48785b7ced1b5ed",
   "lastOpenFiles": [
-    "PLC/servoV6/02_PLC程序的抽象/05_(1)PLC龙门联动控制逻辑.md",
+    "PLC/servoV6/02_PLC程序的抽象/03_PLC变量协议_Modbus最终地址表.md",
+    "PLC/servoV6/03_开发规划/阶段0：协议冻结与测试安全网.md",
+    "PLC/servoV6/02_PLC程序的抽象/03_PLC变量协议.md",
+    "PLC/servoV6/02_PLC程序的抽象/PLC变量协议_Modbus最终地址表.md",
+    "PLC/servoV6/03_开发规划/01_告警码拆分设计与实施规划.md",
     "PLC/servoV6/02_PLC程序的抽象/05_联动建立和解除（上位机视角）.md",
+    "PLC/servoV6/02_PLC程序的抽象/05_(1)PLC龙门联动控制逻辑.md",
     "PLC/servoV6/02_PLC程序的抽象/04_(1)PLC 轴拓扑权威配置.md",
     "PLC/servoV6/02_PLC程序的抽象/04_ PLC轴的配置以及联动逻辑.md",
-    "PLC/servoV6/02_PLC程序的抽象/PLC龙门联动控制逻辑.md",
-    "PLC/servoV6/02_PLC程序的抽象/03_PLC变量协议.md",
     "PLC/servoV6/02_PLC程序的抽象/02_PLC16槽位动态轴整体重构实施规划.md",
+    "PLC/servoV6/01_重构清单/03_联动轴配置与运行解耦设计说明.md",
     "PLC/servoV6/02_PLC程序的抽象/01_PLC当前设计.md",
+    "PLC/servoV6/02_PLC程序的抽象/PLC龙门联动控制逻辑.md",
     "PLC/servoV6/01_重构清单/TIP备忘录.md",
     "PLC/servoV6/01_重构清单/04_PLC问题记录.md",
     "PLC/servoV6/01_重构清单/01_servoV6 与新 PLC 差异.md",
-    "PLC/servoV6/03_开发规划/01_告警码拆分设计与实施规划.md",
-    "PLC/servoV6/03_开发规划/阶段0：协议冻结与测试安全网.md",
     "PLC/servoV6/03_开发规划/告警码拆分设计与实施规划.md",
     "CSAC/环境配置/配置IP地址.md",
     "SSD2351/编译/TFTP烧录内核.md",
@@ -265,9 +268,6 @@
     "PLC/基础知识点.md",
     "PLC/基础知识",
     "PLC/基础知识点 1.md",
-    "PLC/servoV6/01_重构清单/03_联动轴配置与运行解耦设计说明.md",
-    "PLC/servoV6/02_PLC程序的抽象/PLC16槽位动态轴整体重构实施规划.md",
-    "PLC/servoV6/02_PLC程序的抽象/02_PLC16槽位动态轴领域模型与职责配置协议.md",
     "PLC/servoV6/02_PLC程序的抽象",
     "PLC/servoV6/新建文件夹",
     "PLC/servoV6/02_UI逻辑",
