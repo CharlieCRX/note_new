@@ -6,7 +6,7 @@
       {
         "id": "d22ba3f71cb48e0d",
         "type": "tabs",
-        "dimension": 72.95302013422818,
+        "dimension": 64.76510067114094,
         "children": [
           {
             "id": "afe775e2758f0ddc",
@@ -56,7 +56,7 @@
       {
         "id": "afbb0f5262f6e014",
         "type": "tabs",
-        "dimension": 27.046979865771814,
+        "dimension": 35.23489932885906,
         "children": [
           {
             "id": "7ac81578d1af6686",
@@ -238,7 +238,7 @@
       "bases:新建数据库": false
     }
   },
-  "active": "b48785b7ced1b5ed",
+  "active": "7ac81578d1af6686",
   "lastOpenFiles": [
     "PLC/servoV6/02_PLC程序的抽象/03_PLC变量协议_Modbus最终地址表.md",
     "PLC/servoV6/03_开发规划/阶段0：协议冻结与测试安全网.md",
