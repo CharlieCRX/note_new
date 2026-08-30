@@ -14,12 +14,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SSD2351/USBL/环境配置/环境配置记录.md",
+                "file": "PA/杂项/如何阅读riscv手册.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "环境配置记录"
+              "title": "如何阅读riscv手册"
             }
           }
         ]
@@ -35,7 +35,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SSD2351/USBL/环境配置/环境配置记录.md",
+                "file": "PA/杂项/如何阅读riscv手册.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -209,10 +209,16 @@
       "bases:新建数据库": false
     }
   },
-  "active": "83048c1a22174ae8",
+  "active": "b48785b7ced1b5ed",
   "lastOpenFiles": [
-    "SSD2351/USBL/环境配置/FFTW 交叉编译.md",
+    "PA/实验手册/PA2.md",
+    "PA/杂项/如何阅读riscv手册.md",
+    "PA/杂项",
+    "PA/实验手册/PA0.md",
+    "PA/实验手册/PA1.md",
     "SSD2351/USBL/环境配置/环境配置记录.md",
+    "PA/实验手册",
+    "SSD2351/USBL/环境配置/FFTW 交叉编译.md",
     "SSD2351/USBL/需求分析",
     "基础知识/常识/Sysroot 机制.md",
     "基础知识/常识/符号版本.md",
@@ -240,12 +246,7 @@
     "SSD2351/AK5538调试/AK5538调试/AK5538测试脚本.md",
     "SSD2351/AK5538调试/AK5538调试/AK5538通过arecord测试步骤.md",
     "SSD2351/AK5538调试/AK5538调试/Python脚本.md",
-    "SSD2351/AK5538调试/ALSA/代码分析1：Machine 驱动的 probe.md",
-    "SSD2351/AK5538调试/ALSA/基础1-ALSA-高级Linux声音架构.md",
-    "SSD2351/AK5538调试/ALSA/基础2-ASoC (ALSA System on Chip).md",
     "PLC/servoV6/03_开发规划",
-    "PLC/基础知识",
-    "PLC/servoV6/02_PLC程序的抽象",
     "Pasted image 20260625103521.png"
   ]
 }
