@@ -6,6 +6,7 @@
       {
         "id": "1ffa4debcb428b3b",
         "type": "tabs",
+        "dimension": 60.81911262798635,
         "children": [
           {
             "id": "158ff838fa07ac8d",
@@ -13,12 +14,34 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PA/踩坑笔记/pattern_decode 获取key、mask、shift.md",
+                "file": "SSD2351/AK5538调试/ALSA/代码分析1：Machine 驱动的 probe.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "pattern_decode 获取key、mask、shift"
+              "title": "代码分析1：Machine 驱动的 probe"
+            }
+          }
+        ]
+      },
+      {
+        "id": "4d1fce609019514a",
+        "type": "tabs",
+        "dimension": 39.18088737201365,
+        "children": [
+          {
+            "id": "624ece6792a8f0ea",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "SSD2351/AK5538调试/ALSA/代码分析1：Machine 驱动的 probe.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "大纲"
             }
           }
         ]
@@ -55,7 +78,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "path:\"CSAC/\" ",
+                "query": "pad",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -80,7 +103,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 385.5
+    "width": 446.5
   },
   "right": {
     "id": "10f5a50c128e118f",
@@ -188,42 +211,42 @@
   },
   "active": "158ff838fa07ac8d",
   "lastOpenFiles": [
-    "PA/实验手册/PA2.md",
-    "PA/踩坑笔记/pattern_decode 获取key、mask、shift.md",
-    "PA/踩坑笔记/A2.NEMU 如何执行一条 RISC-V 指令（核心）.md",
-    "SSD2351/USBL/环境配置/UART2 RS485 验证方法.md",
-    "2026-09-03.md",
-    "PA/踩坑笔记/A1.NEMU 如何执行一条 RISC-V 指令（调试方向）.md",
-    "PA/实验手册/PA1.md",
-    "PA/实验手册/PA0.md",
+    "SSD2351/AK5538调试/ALSA/基于 SSD2351 + ACM8816 理解 Linux ALSA 架构.md",
+    "SSD2351/编译/编译kernel.md",
+    "SSD2351/编译/修改.config问题.md",
+    "SSD2351/AK5538调试/SSD2351 I2S0 6-Wire 功能验证方案.md",
+    "SSD2351/AK5538调试/TX 验证/acm8816Launch 发生了什么.md",
+    "SSD2351/AK5538调试/TX 验证/acm8816Launch 到芯片输出信号的流程.md",
+    "SSD2351/AK5538调试/TX 验证/基于 acm8816Launch 的 SSD2351 I2S0 TX 信号验证方案.md",
+    "SSD2351/AK5538调试/ACM8816 驱动修改与 AK5538 arecord 调试历程总结.md",
+    "SSD2351/AK5538调试/USBL 任务汇总6.25.md",
+    "SSD2351/AK5538调试/TX 验证/实验测试/ACM8816 驱动修改与 AK5538 arecord 调试历程总结 - 192K错误协商.md",
+    "SSD2351/AK5538调试/TX 验证/实验测试/关于“绕过 ACM8816 驱动后录音数据为何来自 AK5538”的原理说明.md",
+    "SSD2351/AK5538调试/TX 验证/实验测试/USBL 平台 AK5538 录音功能调试（1） — 问题定位与下一步 Debug 步骤.md",
+    "SSD2351/AK5538调试/ALSA/代码分析1：Machine 驱动的 probe.md",
+    "SSD2351/AK5538调试/I2S0 配置/逻辑管脚（Logical Pad）对应的功能.md",
+    "SSD2351/AK5538调试/I2S0 配置/DTS配置.md",
+    "工作记录/复盘/RS485设备无响应的分层排查.md",
+    "工作记录/工程师痛点库/P001-RS485无响应.md",
+    "工作记录/复盘",
+    "CSAC/README.md",
+    "PLC/servoV6/02_PLC程序的抽象/05_联动建立和解除（上位机视角）.md",
+    "PLC/servoV6/02_PLC程序的抽象/05_(1)PLC龙门联动控制逻辑.md",
+    "PLC/servoV6/02_PLC程序的抽象/04_(1)PLC 轴拓扑权威配置.md",
+    "PLC/servoV6/02_PLC程序的抽象/04_ PLC轴的配置以及联动逻辑.md",
+    "PLC/servoV6/02_PLC程序的抽象/02_PLC16槽位动态轴整体重构实施规划.md",
+    "PLC/servoV6/02_PLC程序的抽象/01_PLC当前设计.md",
+    "SSD2351/编译/TFTP烧录内核.md",
+    "SSD2351/USBL/调试记录/2026-09-03_HCM360B_RS485无响应.md",
+    "SSD2351/USBL/调试记录",
+    "treelog.txt",
+    "工作记录/工程师痛点库",
+    "工作记录",
     "PA/踩坑笔记",
-    "PA/杂项/每学习 1 小时，正式笔记最多 10 分钟.md",
-    "SSD2351/USBL/需求分析/USBL 难点.md",
-    "CSAC/环境配置/配置IP地址.md",
-    "PA/杂项/如何阅读riscv手册.md",
     "PA/杂项",
     "PA/实验手册",
     "PA",
-    "SSD2351/编译/编译kernel.md",
-    "SSD2351/编译/TFTP烧录内核.md",
-    "SSD2351/编译/修改.config问题.md",
-    "RISCV/单词语法/Chapter_1.md",
-    "RISCV/Chapter 1. Introduction.md",
-    "基础知识/Linux命令/readelf - 解析 ELF 格式文件.md",
-    "基础知识/Linux命令/strings - 提取二进制文件中的所有可打印字符.md",
-    "SSD2351/USBL/环境配置/环境配置记录.md",
-    "基础知识/常识/链接器与动态加载器的区别.md",
-    "基础知识/常识/交叉编译三要素.md",
-    "基础知识/常识/符号版本.md",
-    "SSD2351/USBL/环境配置/FFTW 交叉编译.md",
     "SSD2351/USBL/需求分析",
-    "基础知识/常识/Sysroot 机制.md",
-    "基础知识/常识/NEON 与 Cortex-A53 优化.md",
-    "SSD2351/USBL/环境配置",
-    "基础知识/常识",
-    "未命名",
-    "基础知识/Linux命令",
-    "基础知识",
     "Pasted image 20260625103521.png"
   ]
 }

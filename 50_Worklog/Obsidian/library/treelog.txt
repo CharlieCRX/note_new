@@ -1,0 +1,140 @@
+.
+|-- CSAC
+|   |-- README.md
+|   |-- 环境配置
+|   |   |-- SSH公钥认证失败问题分析报告.md
+|   |   |-- 本地HTTP测试接口的方法.md
+|   |   |-- 多开发板自动部署脚本设计说明.md
+|   |   `-- 配置IP地址.md
+|   |-- 手册知识
+|   |   |-- csac手册单词.md
+|   |   |-- 第二章(1)：功能描述.md
+|   |   |-- 第二章(2)：驯服相关内容.md
+|   |   `-- 第一章：简介.md
+|   `-- 需求实现
+|       |-- 等待训练结束脚本.md
+|       `-- 铷钟开发板 4 号驯服相位漂移问题分析与定位报告.md
+|-- PA
+|   |-- 踩坑笔记
+|   |   |-- A1.NEMU 如何执行一条 RISC-V 指令（调试方向）.md
+|   |   |-- A2.NEMU 如何执行一条 RISC-V 指令（核心）.md
+|   |   `-- pattern_decode 获取key、mask、shift.md
+|   |-- 实验手册
+|   |   |-- PA0.md
+|   |   |-- PA1.md
+|   |   `-- PA2.md
+|   `-- 杂项
+|       |-- 每学习 1 小时，正式笔记最多 10 分钟.md
+|       `-- 如何阅读riscv手册.md
+|-- PLC
+|   |-- servoV6
+|   |   |-- 01_重构清单
+|   |   |   |-- 01_servoV6 与新 PLC 差异.md
+|   |   |   |-- 02_齿轮比是否可配置.md
+|   |   |   |-- 03_联动轴配置与运行解耦设计说明.md
+|   |   |   |-- 04_PLC问题记录.md
+|   |   |   `-- TIP备忘录.md
+|   |   |-- 02_PLC程序的抽象
+|   |   |   |-- 01_PLC当前设计.md
+|   |   |   |-- 02_PLC16槽位动态轴整体重构实施规划.md
+|   |   |   |-- 03_PLC变量协议_Modbus最终地址表.md
+|   |   |   |-- 04_ PLC轴的配置以及联动逻辑.md
+|   |   |   |-- 04_(1)PLC 轴拓扑权威配置.md
+|   |   |   |-- 05_(1)PLC龙门联动控制逻辑.md
+|   |   |   `-- 05_联动建立和解除（上位机视角）.md
+|   |   `-- 03_开发规划
+|   |       |-- 01_告警码拆分设计与实施规划.md
+|   |       `-- 阶段0：协议冻结与测试安全网.md
+|   |-- 基础知识
+|   |   `-- 01_PLC变量协议属性.md
+|   |-- 问题描述
+|   |   `-- PLC 设计问题导致 servoV6 程序复杂化分析.md
+|   `-- 章节学习
+|       `-- 第5章：编程基础.md
+|-- RISCV
+|   |-- Chapter 1. Introduction.md
+|   `-- 单词语法
+|       `-- Chapter_1.md
+|-- SSD2351
+|   |-- AK5538调试
+|   |   |-- ACM8816 驱动修改与 AK5538 arecord 调试历程总结.md
+|   |   |-- AK5538调试
+|   |   |   |-- AK5538测试脚本.md
+|   |   |   |-- AK5538通过arecord测试步骤.md
+|   |   |   `-- Python脚本.md
+|   |   |-- ALSA
+|   |   |   |-- 代码分析1：Machine 驱动的 probe.md
+|   |   |   |-- 基础1-ALSA-高级Linux声音架构.md
+|   |   |   |-- 基础2-ASoC (ALSA System on Chip).md
+|   |   |   |-- 基础3-CPU DAI vs Codec DAI.md
+|   |   |   |-- 基于 SSD2351 + ACM8816 理解 Linux ALSA 架构.md
+|   |   |   |-- 实践二(2)：Codec 驱动做了什么？.md
+|   |   |   |-- 实践二：PCM Device 是什么时候创建的？.md
+|   |   |   |-- 实践一(1)：Codec DAI 如何影响 ALSA 设备.md
+|   |   |   `-- 实践一(2)：ASoC 驱动中 DAI Capture 属性对 snd 设备节点生成的影响分析.md
+|   |   |-- I2S0 配置
+|   |   |   |-- DTS配置.md
+|   |   |   |-- I2S 的四线、六线.md
+|   |   |   |-- I2S0 6-Wire PadMux 与 Device Tree 配置分析.md
+|   |   |   |-- SSD2351 I2S0 6-Wire 支持性分析（第一阶段）.md
+|   |   |   |-- USBL 管脚定义与 PadMux 中 PAD 名称差异分析.md
+|   |   |   |-- USBL管脚定义与DTS冲突.md
+|   |   |   |-- 逻辑管脚（Logical Pad）对应的功能.md
+|   |   |   |-- 配置 I2S0 使用的 PCB引脚.md
+|   |   |   `-- 驱动程序读取并转换 DTS 配置(acm8816).md
+|   |   |-- RX 验证
+|   |   |   |-- AK5538 的工作机制.md
+|   |   |   |-- AK5538 独立测试 — 方案 A：fpga 工具 + i2c-tools 脚本（USBL 平台）.md
+|   |   |   |-- AK5538 内核驱动寄存器与配置映射表.md
+|   |   |   |-- AK5538 驱动保留与用户态 I2C+FPGA 共存方案.md
+|   |   |   |-- AK5538 适配修改与验证说明（终）.md
+|   |   |   |-- USBL 平台 AK5538 + SSD2351 I2S RX 调试排查指南.md
+|   |   |   `-- USBL 平台 I2S0 RX 调试总结（arecord 调试阶段）.md
+|   |   |-- SSD2351 I2S0 6-Wire 功能验证方案.md
+|   |   |-- TX 验证
+|   |   |   |-- acm8816Launch 到芯片输出信号的流程.md
+|   |   |   |-- acm8816Launch 发生了什么.md
+|   |   |   |-- 基于 acm8816Launch 的 SSD2351 I2S0 TX 信号验证方案.md
+|   |   |   `-- 实验测试
+|   |   |       |-- ACM8816 record 调用 AK5538 配置体系分析与调试指南.md
+|   |   |       |-- ACM8816 驱动修改与 AK5538 arecord 调试历程总结 - 192K错误协商.md
+|   |   |       |-- USBL 平台 AK5538 录音功能调试（1） — 问题定位与下一步 Debug 步骤.md
+|   |   |       |-- USBL 平台 AK5538 录音功能调试实验记录 - 192K的错误协商.md
+|   |   |       |-- USBL 平台 AK5538 录音功能集成实践方案.md
+|   |   |       |-- sstar_pcm.c DMA 缓冲区分配问题分析.md
+|   |   |       `-- 关于“绕过 ACM8816 驱动后录音数据为何来自 AK5538”的原理说明.md
+|   |   |-- USBL 任务汇总6.25.md
+|   |   `-- 网络转发
+|   |       `-- 需求说明.md
+|   |-- USBL
+|   |   |-- 环境配置
+|   |   |   |-- UART2 RS485 验证方法.md
+|   |   |   `-- 环境配置记录.md
+|   |   `-- 需求分析
+|   |       `-- USBL 难点.md
+|   |-- 编译
+|   |   |-- TFTP烧录内核.md
+|   |   |-- 编译kernel.md
+|   |   `-- 修改.config问题.md
+|   `-- 附录
+|       |-- acm8816.c
+|       |-- soc-core.c
+|       |-- soc-pcm.c
+|       `-- sstar_asoc_card.c
+|-- treelog.txt
+|-- 工作记录
+|   `-- 工程师痛点库
+|       |-- P001-RS485无响应.md
+|       `-- README.md
+`-- 基础知识
+    |-- Linux命令
+    |   |-- readelf - 解析 ELF 格式文件.md
+    |   `-- strings - 提取二进制文件中的所有可打印字符.md
+    `-- 常识
+        |-- NEON 与 Cortex-A53 优化.md
+        |-- Sysroot 机制.md
+        |-- 符号版本.md
+        |-- 交叉编译三要素.md
+        `-- 链接器与动态加载器的区别.md
+
+37 directories, 100 files
